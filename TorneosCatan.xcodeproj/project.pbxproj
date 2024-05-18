@@ -1,0 +1,593 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CF3500212BF90A0C00D64D28 /* TorneosCatanApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3500202BF90A0C00D64D28 /* TorneosCatanApp.swift */; };
+		CF3500232BF90A0C00D64D28 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3500222BF90A0C00D64D28 /* ContentView.swift */; };
+		CF3500252BF90A0D00D64D28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF3500242BF90A0D00D64D28 /* Assets.xcassets */; };
+		CF3500282BF90A0D00D64D28 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF3500272BF90A0D00D64D28 /* Preview Assets.xcassets */; };
+		CF3500322BF90A0D00D64D28 /* TorneosCatanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3500312BF90A0D00D64D28 /* TorneosCatanTests.swift */; };
+		CF35003C2BF90A0D00D64D28 /* TorneosCatanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF35003B2BF90A0D00D64D28 /* TorneosCatanUITests.swift */; };
+		CF35003E2BF90A0D00D64D28 /* TorneosCatanUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF35003D2BF90A0D00D64D28 /* TorneosCatanUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CF35002E2BF90A0D00D64D28 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF3500152BF90A0C00D64D28 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CF35001C2BF90A0C00D64D28;
+			remoteInfo = TorneosCatan;
+		};
+		CF3500382BF90A0D00D64D28 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF3500152BF90A0C00D64D28 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CF35001C2BF90A0C00D64D28;
+			remoteInfo = TorneosCatan;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CF35001D2BF90A0C00D64D28 /* TorneosCatan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TorneosCatan.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF3500202BF90A0C00D64D28 /* TorneosCatanApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TorneosCatanApp.swift; sourceTree = "<group>"; };
+		CF3500222BF90A0C00D64D28 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CF3500242BF90A0D00D64D28 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CF3500272BF90A0D00D64D28 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CF35002D2BF90A0D00D64D28 /* TorneosCatanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TorneosCatanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF3500312BF90A0D00D64D28 /* TorneosCatanTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TorneosCatanTests.swift; sourceTree = "<group>"; };
+		CF3500372BF90A0D00D64D28 /* TorneosCatanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TorneosCatanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF35003B2BF90A0D00D64D28 /* TorneosCatanUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TorneosCatanUITests.swift; sourceTree = "<group>"; };
+		CF35003D2BF90A0D00D64D28 /* TorneosCatanUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TorneosCatanUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CF35001A2BF90A0C00D64D28 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF35002A2BF90A0D00D64D28 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF3500342BF90A0D00D64D28 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CF3500142BF90A0C00D64D28 = {
+			isa = PBXGroup;
+			children = (
+				CF35001F2BF90A0C00D64D28 /* TorneosCatan */,
+				CF3500302BF90A0D00D64D28 /* TorneosCatanTests */,
+				CF35003A2BF90A0D00D64D28 /* TorneosCatanUITests */,
+				CF35001E2BF90A0C00D64D28 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CF35001E2BF90A0C00D64D28 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CF35001D2BF90A0C00D64D28 /* TorneosCatan.app */,
+				CF35002D2BF90A0D00D64D28 /* TorneosCatanTests.xctest */,
+				CF3500372BF90A0D00D64D28 /* TorneosCatanUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CF35001F2BF90A0C00D64D28 /* TorneosCatan */ = {
+			isa = PBXGroup;
+			children = (
+				CF3500202BF90A0C00D64D28 /* TorneosCatanApp.swift */,
+				CF3500222BF90A0C00D64D28 /* ContentView.swift */,
+				CF3500242BF90A0D00D64D28 /* Assets.xcassets */,
+				CF3500262BF90A0D00D64D28 /* Preview Content */,
+			);
+			path = TorneosCatan;
+			sourceTree = "<group>";
+		};
+		CF3500262BF90A0D00D64D28 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				CF3500272BF90A0D00D64D28 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CF3500302BF90A0D00D64D28 /* TorneosCatanTests */ = {
+			isa = PBXGroup;
+			children = (
+				CF3500312BF90A0D00D64D28 /* TorneosCatanTests.swift */,
+			);
+			path = TorneosCatanTests;
+			sourceTree = "<group>";
+		};
+		CF35003A2BF90A0D00D64D28 /* TorneosCatanUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CF35003B2BF90A0D00D64D28 /* TorneosCatanUITests.swift */,
+				CF35003D2BF90A0D00D64D28 /* TorneosCatanUITestsLaunchTests.swift */,
+			);
+			path = TorneosCatanUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CF35001C2BF90A0C00D64D28 /* TorneosCatan */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF3500412BF90A0D00D64D28 /* Build configuration list for PBXNativeTarget "TorneosCatan" */;
+			buildPhases = (
+				CF3500192BF90A0C00D64D28 /* Sources */,
+				CF35001A2BF90A0C00D64D28 /* Frameworks */,
+				CF35001B2BF90A0C00D64D28 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TorneosCatan;
+			productName = TorneosCatan;
+			productReference = CF35001D2BF90A0C00D64D28 /* TorneosCatan.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CF35002C2BF90A0D00D64D28 /* TorneosCatanTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF3500442BF90A0D00D64D28 /* Build configuration list for PBXNativeTarget "TorneosCatanTests" */;
+			buildPhases = (
+				CF3500292BF90A0D00D64D28 /* Sources */,
+				CF35002A2BF90A0D00D64D28 /* Frameworks */,
+				CF35002B2BF90A0D00D64D28 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CF35002F2BF90A0D00D64D28 /* PBXTargetDependency */,
+			);
+			name = TorneosCatanTests;
+			productName = TorneosCatanTests;
+			productReference = CF35002D2BF90A0D00D64D28 /* TorneosCatanTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CF3500362BF90A0D00D64D28 /* TorneosCatanUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF3500472BF90A0D00D64D28 /* Build configuration list for PBXNativeTarget "TorneosCatanUITests" */;
+			buildPhases = (
+				CF3500332BF90A0D00D64D28 /* Sources */,
+				CF3500342BF90A0D00D64D28 /* Frameworks */,
+				CF3500352BF90A0D00D64D28 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CF3500392BF90A0D00D64D28 /* PBXTargetDependency */,
+			);
+			name = TorneosCatanUITests;
+			productName = TorneosCatanUITests;
+			productReference = CF3500372BF90A0D00D64D28 /* TorneosCatanUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CF3500152BF90A0C00D64D28 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					CF35001C2BF90A0C00D64D28 = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					CF35002C2BF90A0D00D64D28 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = CF35001C2BF90A0C00D64D28;
+					};
+					CF3500362BF90A0D00D64D28 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = CF35001C2BF90A0C00D64D28;
+					};
+				};
+			};
+			buildConfigurationList = CF3500182BF90A0C00D64D28 /* Build configuration list for PBXProject "TorneosCatan" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF3500142BF90A0C00D64D28;
+			productRefGroup = CF35001E2BF90A0C00D64D28 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CF35001C2BF90A0C00D64D28 /* TorneosCatan */,
+				CF35002C2BF90A0D00D64D28 /* TorneosCatanTests */,
+				CF3500362BF90A0D00D64D28 /* TorneosCatanUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CF35001B2BF90A0C00D64D28 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF3500282BF90A0D00D64D28 /* Preview Assets.xcassets in Resources */,
+				CF3500252BF90A0D00D64D28 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF35002B2BF90A0D00D64D28 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF3500352BF90A0D00D64D28 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CF3500192BF90A0C00D64D28 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF3500232BF90A0C00D64D28 /* ContentView.swift in Sources */,
+				CF3500212BF90A0C00D64D28 /* TorneosCatanApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF3500292BF90A0D00D64D28 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF3500322BF90A0D00D64D28 /* TorneosCatanTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF3500332BF90A0D00D64D28 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF35003C2BF90A0D00D64D28 /* TorneosCatanUITests.swift in Sources */,
+				CF35003E2BF90A0D00D64D28 /* TorneosCatanUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CF35002F2BF90A0D00D64D28 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CF35001C2BF90A0C00D64D28 /* TorneosCatan */;
+			targetProxy = CF35002E2BF90A0D00D64D28 /* PBXContainerItemProxy */;
+		};
+		CF3500392BF90A0D00D64D28 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CF35001C2BF90A0C00D64D28 /* TorneosCatan */;
+			targetProxy = CF3500382BF90A0D00D64D28 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		CF35003F2BF90A0D00D64D28 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CF3500402BF90A0D00D64D28 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CF3500422BF90A0D00D64D28 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"TorneosCatan/Preview Content\"";
+				DEVELOPMENT_TEAM = N3ST245ZGW;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.conigarcia.TorneosCatan;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CF3500432BF90A0D00D64D28 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"TorneosCatan/Preview Content\"";
+				DEVELOPMENT_TEAM = N3ST245ZGW;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.conigarcia.TorneosCatan;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CF3500452BF90A0D00D64D28 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N3ST245ZGW;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.conigarcia.TorneosCatanTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TorneosCatan.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TorneosCatan";
+			};
+			name = Debug;
+		};
+		CF3500462BF90A0D00D64D28 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N3ST245ZGW;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.conigarcia.TorneosCatanTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TorneosCatan.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TorneosCatan";
+			};
+			name = Release;
+		};
+		CF3500482BF90A0D00D64D28 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N3ST245ZGW;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.conigarcia.TorneosCatanUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TorneosCatan;
+			};
+			name = Debug;
+		};
+		CF3500492BF90A0D00D64D28 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N3ST245ZGW;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.conigarcia.TorneosCatanUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TorneosCatan;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CF3500182BF90A0C00D64D28 /* Build configuration list for PBXProject "TorneosCatan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF35003F2BF90A0D00D64D28 /* Debug */,
+				CF3500402BF90A0D00D64D28 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF3500412BF90A0D00D64D28 /* Build configuration list for PBXNativeTarget "TorneosCatan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF3500422BF90A0D00D64D28 /* Debug */,
+				CF3500432BF90A0D00D64D28 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF3500442BF90A0D00D64D28 /* Build configuration list for PBXNativeTarget "TorneosCatanTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF3500452BF90A0D00D64D28 /* Debug */,
+				CF3500462BF90A0D00D64D28 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF3500472BF90A0D00D64D28 /* Build configuration list for PBXNativeTarget "TorneosCatanUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF3500482BF90A0D00D64D28 /* Debug */,
+				CF3500492BF90A0D00D64D28 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CF3500152BF90A0C00D64D28 /* Project object */;
+}

@@ -8,12 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		CF3500212BF90A0C00D64D28 /* TorneosCatanApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3500202BF90A0C00D64D28 /* TorneosCatanApp.swift */; };
-		CF3500232BF90A0C00D64D28 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3500222BF90A0C00D64D28 /* ContentView.swift */; };
+		CF3500232BF90A0C00D64D28 /* PlayerListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3500222BF90A0C00D64D28 /* PlayerListView.swift */; };
 		CF3500252BF90A0D00D64D28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF3500242BF90A0D00D64D28 /* Assets.xcassets */; };
 		CF3500282BF90A0D00D64D28 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF3500272BF90A0D00D64D28 /* Preview Assets.xcassets */; };
 		CF3500322BF90A0D00D64D28 /* TorneosCatanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3500312BF90A0D00D64D28 /* TorneosCatanTests.swift */; };
 		CF35003C2BF90A0D00D64D28 /* TorneosCatanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF35003B2BF90A0D00D64D28 /* TorneosCatanUITests.swift */; };
 		CF35003E2BF90A0D00D64D28 /* TorneosCatanUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF35003D2BF90A0D00D64D28 /* TorneosCatanUITestsLaunchTests.swift */; };
+		CF35004B2BF90AE000D64D28 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF35004A2BF90AE000D64D28 /* Player.swift */; };
+		CF35004D2BF90B8500D64D28 /* PlayerColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF35004C2BF90B8500D64D28 /* PlayerColor.swift */; };
+		CF3500532BF918B800D64D28 /* NewPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3500522BF918B800D64D28 /* NewPlayerView.swift */; };
+		CF3500562BF91A4100D64D28 /* TCTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3500552BF91A4100D64D28 /* TCTextFieldStyle.swift */; };
+		CF3500592BF91BD500D64D28 /* MultiSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3500582BF91BD500D64D28 /* MultiSelector.swift */; };
+		CF35005B2BF91BE800D64D28 /* MultiSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF35005A2BF91BE800D64D28 /* MultiSelectionView.swift */; };
+		CF35005F2BF91C9500D64D28 /* TCColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF35005E2BF91C9500D64D28 /* TCColorPicker.swift */; };
+		CF3500612BF9210000D64D28 /* PlayerRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3500602BF9210000D64D28 /* PlayerRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +44,7 @@
 /* Begin PBXFileReference section */
 		CF35001D2BF90A0C00D64D28 /* TorneosCatan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TorneosCatan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF3500202BF90A0C00D64D28 /* TorneosCatanApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TorneosCatanApp.swift; sourceTree = "<group>"; };
-		CF3500222BF90A0C00D64D28 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CF3500222BF90A0C00D64D28 /* PlayerListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerListView.swift; sourceTree = "<group>"; };
 		CF3500242BF90A0D00D64D28 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF3500272BF90A0D00D64D28 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CF35002D2BF90A0D00D64D28 /* TorneosCatanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TorneosCatanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +52,14 @@
 		CF3500372BF90A0D00D64D28 /* TorneosCatanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TorneosCatanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF35003B2BF90A0D00D64D28 /* TorneosCatanUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TorneosCatanUITests.swift; sourceTree = "<group>"; };
 		CF35003D2BF90A0D00D64D28 /* TorneosCatanUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TorneosCatanUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CF35004A2BF90AE000D64D28 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		CF35004C2BF90B8500D64D28 /* PlayerColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerColor.swift; sourceTree = "<group>"; };
+		CF3500522BF918B800D64D28 /* NewPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlayerView.swift; sourceTree = "<group>"; };
+		CF3500552BF91A4100D64D28 /* TCTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCTextFieldStyle.swift; sourceTree = "<group>"; };
+		CF3500582BF91BD500D64D28 /* MultiSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiSelector.swift; sourceTree = "<group>"; };
+		CF35005A2BF91BE800D64D28 /* MultiSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiSelectionView.swift; sourceTree = "<group>"; };
+		CF35005E2BF91C9500D64D28 /* TCColorPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCColorPicker.swift; sourceTree = "<group>"; };
+		CF3500602BF9210000D64D28 /* PlayerRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +111,10 @@
 			isa = PBXGroup;
 			children = (
 				CF3500202BF90A0C00D64D28 /* TorneosCatanApp.swift */,
-				CF3500222BF90A0C00D64D28 /* ContentView.swift */,
+				CF35004E2BF9180800D64D28 /* Model */,
+				CF3500502BF9182C00D64D28 /* Screens */,
+				CF3500542BF91A3100D64D28 /* Styles */,
+				CF35005C2BF91C5000D64D28 /* Utilities */,
 				CF3500242BF90A0D00D64D28 /* Assets.xcassets */,
 				CF3500262BF90A0D00D64D28 /* Preview Content */,
 			);
@@ -125,6 +144,75 @@
 				CF35003D2BF90A0D00D64D28 /* TorneosCatanUITestsLaunchTests.swift */,
 			);
 			path = TorneosCatanUITests;
+			sourceTree = "<group>";
+		};
+		CF35004E2BF9180800D64D28 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CF35004A2BF90AE000D64D28 /* Player.swift */,
+				CF35004C2BF90B8500D64D28 /* PlayerColor.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CF35004F2BF9181100D64D28 /* PlayerList */ = {
+			isa = PBXGroup;
+			children = (
+				CF3500222BF90A0C00D64D28 /* PlayerListView.swift */,
+				CF3500522BF918B800D64D28 /* NewPlayerView.swift */,
+				CF3500602BF9210000D64D28 /* PlayerRowView.swift */,
+			);
+			path = PlayerList;
+			sourceTree = "<group>";
+		};
+		CF3500502BF9182C00D64D28 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				CF35004F2BF9181100D64D28 /* PlayerList */,
+				CF3500512BF9183600D64D28 /* PlayerDetail */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		CF3500512BF9183600D64D28 /* PlayerDetail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PlayerDetail;
+			sourceTree = "<group>";
+		};
+		CF3500542BF91A3100D64D28 /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				CF3500552BF91A4100D64D28 /* TCTextFieldStyle.swift */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
+		CF3500572BF91BC400D64D28 /* MultiSelector */ = {
+			isa = PBXGroup;
+			children = (
+				CF3500582BF91BD500D64D28 /* MultiSelector.swift */,
+				CF35005A2BF91BE800D64D28 /* MultiSelectionView.swift */,
+			);
+			path = MultiSelector;
+			sourceTree = "<group>";
+		};
+		CF35005C2BF91C5000D64D28 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				CF35005D2BF91C7900D64D28 /* ColorPicker */,
+				CF3500572BF91BC400D64D28 /* MultiSelector */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		CF35005D2BF91C7900D64D28 /* ColorPicker */ = {
+			isa = PBXGroup;
+			children = (
+				CF35005E2BF91C9500D64D28 /* TCColorPicker.swift */,
+			);
+			path = ColorPicker;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +345,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF3500232BF90A0C00D64D28 /* ContentView.swift in Sources */,
+				CF35004D2BF90B8500D64D28 /* PlayerColor.swift in Sources */,
+				CF3500232BF90A0C00D64D28 /* PlayerListView.swift in Sources */,
+				CF3500592BF91BD500D64D28 /* MultiSelector.swift in Sources */,
+				CF3500532BF918B800D64D28 /* NewPlayerView.swift in Sources */,
+				CF3500612BF9210000D64D28 /* PlayerRowView.swift in Sources */,
+				CF35005F2BF91C9500D64D28 /* TCColorPicker.swift in Sources */,
+				CF35004B2BF90AE000D64D28 /* Player.swift in Sources */,
+				CF3500562BF91A4100D64D28 /* TCTextFieldStyle.swift in Sources */,
 				CF3500212BF90A0C00D64D28 /* TorneosCatanApp.swift in Sources */,
+				CF35005B2BF91BE800D64D28 /* MultiSelectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

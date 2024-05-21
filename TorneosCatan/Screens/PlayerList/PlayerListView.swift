@@ -23,8 +23,7 @@ struct PlayerListView: View {
                             Text(player.name)
                                 .foregroundStyle(player.color.color)
                         } label: {
-                            Text(player.name)
-                                .fontWeight(.medium)
+                            PlayerRowView(player: player)
                         }
                     }
                     .onDelete(perform: deletePlayers)
@@ -57,6 +56,8 @@ struct PlayerListView: View {
 }
 
 #Preview {
-    PlayerListView()
-        .modelContainer(for: Player.self, inMemory: true)
+    let preview = Preview(Player.self)
+    preview.addSamples(Player.samplePlayes)
+    return PlayerListView()
+        .modelContainer(preview.container)
 }

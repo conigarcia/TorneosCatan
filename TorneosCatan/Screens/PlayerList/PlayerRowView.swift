@@ -8,11 +8,18 @@
 import SwiftUI
 
 struct PlayerRowView: View {
+    let player: Player
+    
     var body: some View {
-        Text("Hello, World!")
+        Text(player.name)
+            .fontWeight(.medium)
     }
 }
 
 #Preview {
-    PlayerRowView()
+    let preview = Preview(Player.self)
+    return NavigationStack {
+        PlayerRowView(player: Player.samplePlayes[0])
+            .modelContainer(preview.container)
+    }
 }

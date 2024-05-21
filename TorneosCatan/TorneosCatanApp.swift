@@ -23,8 +23,12 @@ struct TorneosCatanApp: App {
 
     var body: some Scene {
         WindowGroup {
-            PlayerListView()
+            MainTabView()
         }
         .modelContainer(sharedModelContainer)
     }
+    
+//    init() {
+//        print(URL.applicationSupportDirectory.path(percentEncoded: false))
+//    }
 }

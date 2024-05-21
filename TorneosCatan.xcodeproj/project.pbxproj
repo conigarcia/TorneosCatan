@@ -10,6 +10,13 @@
 		CF1F8A0A2BFBDEE300305CE3 /* PlayerSamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1F8A092BFBDEE300305CE3 /* PlayerSamples.swift */; };
 		CF1F8A0C2BFBDF7400305CE3 /* PreviewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1F8A0B2BFBDF7400305CE3 /* PreviewContainer.swift */; };
 		CF1F8A0E2BFC2F9C00305CE3 /* PlayerDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1F8A0D2BFC2F9C00305CE3 /* PlayerDetailView.swift */; };
+		CF1F8A102BFC339F00305CE3 /* Tournament.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1F8A0F2BFC339F00305CE3 /* Tournament.swift */; };
+		CF1F8A122BFC355800305CE3 /* TournamentSamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1F8A112BFC355800305CE3 /* TournamentSamples.swift */; };
+		CF1F8A152BFC366700305CE3 /* TournamentListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1F8A142BFC366700305CE3 /* TournamentListView.swift */; };
+		CF1F8A172BFC37C700305CE3 /* TournamentRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1F8A162BFC37C700305CE3 /* TournamentRowView.swift */; };
+		CF1F8A1A2BFC385400305CE3 /* TournamentDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1F8A192BFC385400305CE3 /* TournamentDetailView.swift */; };
+		CF1F8A1C2BFC38E800305CE3 /* NewTournamentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1F8A1B2BFC38E800305CE3 /* NewTournamentView.swift */; };
+		CF1F8A1F2BFC3C7A00305CE3 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1F8A1E2BFC3C7A00305CE3 /* MainTabView.swift */; };
 		CF3500212BF90A0C00D64D28 /* TorneosCatanApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3500202BF90A0C00D64D28 /* TorneosCatanApp.swift */; };
 		CF3500232BF90A0C00D64D28 /* PlayerListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3500222BF90A0C00D64D28 /* PlayerListView.swift */; };
 		CF3500252BF90A0D00D64D28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF3500242BF90A0D00D64D28 /* Assets.xcassets */; };
@@ -48,6 +55,13 @@
 		CF1F8A092BFBDEE300305CE3 /* PlayerSamples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSamples.swift; sourceTree = "<group>"; };
 		CF1F8A0B2BFBDF7400305CE3 /* PreviewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewContainer.swift; sourceTree = "<group>"; };
 		CF1F8A0D2BFC2F9C00305CE3 /* PlayerDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDetailView.swift; sourceTree = "<group>"; };
+		CF1F8A0F2BFC339F00305CE3 /* Tournament.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tournament.swift; sourceTree = "<group>"; };
+		CF1F8A112BFC355800305CE3 /* TournamentSamples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentSamples.swift; sourceTree = "<group>"; };
+		CF1F8A142BFC366700305CE3 /* TournamentListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentListView.swift; sourceTree = "<group>"; };
+		CF1F8A162BFC37C700305CE3 /* TournamentRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentRowView.swift; sourceTree = "<group>"; };
+		CF1F8A192BFC385400305CE3 /* TournamentDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentDetailView.swift; sourceTree = "<group>"; };
+		CF1F8A1B2BFC38E800305CE3 /* NewTournamentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTournamentView.swift; sourceTree = "<group>"; };
+		CF1F8A1E2BFC3C7A00305CE3 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		CF35001D2BF90A0C00D64D28 /* TorneosCatan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TorneosCatan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF3500202BF90A0C00D64D28 /* TorneosCatanApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TorneosCatanApp.swift; sourceTree = "<group>"; };
 		CF3500222BF90A0C00D64D28 /* PlayerListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerListView.swift; sourceTree = "<group>"; };
@@ -93,6 +107,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CF1F8A132BFC364200305CE3 /* TournamentList */ = {
+			isa = PBXGroup;
+			children = (
+				CF1F8A142BFC366700305CE3 /* TournamentListView.swift */,
+				CF1F8A162BFC37C700305CE3 /* TournamentRowView.swift */,
+				CF1F8A1B2BFC38E800305CE3 /* NewTournamentView.swift */,
+			);
+			path = TournamentList;
+			sourceTree = "<group>";
+		};
+		CF1F8A182BFC383000305CE3 /* TournamentDetail */ = {
+			isa = PBXGroup;
+			children = (
+				CF1F8A192BFC385400305CE3 /* TournamentDetailView.swift */,
+			);
+			path = TournamentDetail;
+			sourceTree = "<group>";
+		};
+		CF1F8A1D2BFC3C6600305CE3 /* MainTab */ = {
+			isa = PBXGroup;
+			children = (
+				CF1F8A1E2BFC3C7A00305CE3 /* MainTabView.swift */,
+			);
+			path = MainTab;
+			sourceTree = "<group>";
+		};
 		CF3500142BF90A0C00D64D28 = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +172,7 @@
 			children = (
 				CF3500272BF90A0D00D64D28 /* Preview Assets.xcassets */,
 				CF1F8A092BFBDEE300305CE3 /* PlayerSamples.swift */,
+				CF1F8A112BFC355800305CE3 /* TournamentSamples.swift */,
 				CF1F8A0B2BFBDF7400305CE3 /* PreviewContainer.swift */,
 			);
 			path = "Preview Content";
@@ -159,6 +200,7 @@
 			children = (
 				CF35004A2BF90AE000D64D28 /* Player.swift */,
 				CF35004C2BF90B8500D64D28 /* PlayerColor.swift */,
+				CF1F8A0F2BFC339F00305CE3 /* Tournament.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -167,8 +209,8 @@
 			isa = PBXGroup;
 			children = (
 				CF3500222BF90A0C00D64D28 /* PlayerListView.swift */,
-				CF3500522BF918B800D64D28 /* NewPlayerView.swift */,
 				CF3500602BF9210000D64D28 /* PlayerRowView.swift */,
+				CF3500522BF918B800D64D28 /* NewPlayerView.swift */,
 			);
 			path = PlayerList;
 			sourceTree = "<group>";
@@ -176,8 +218,11 @@
 		CF3500502BF9182C00D64D28 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				CF1F8A1D2BFC3C6600305CE3 /* MainTab */,
 				CF35004F2BF9181100D64D28 /* PlayerList */,
 				CF3500512BF9183600D64D28 /* PlayerDetail */,
+				CF1F8A132BFC364200305CE3 /* TournamentList */,
+				CF1F8A182BFC383000305CE3 /* TournamentDetail */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -354,19 +399,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF1F8A172BFC37C700305CE3 /* TournamentRowView.swift in Sources */,
+				CF1F8A102BFC339F00305CE3 /* Tournament.swift in Sources */,
 				CF35004D2BF90B8500D64D28 /* PlayerColor.swift in Sources */,
 				CF3500232BF90A0C00D64D28 /* PlayerListView.swift in Sources */,
 				CF1F8A0E2BFC2F9C00305CE3 /* PlayerDetailView.swift in Sources */,
 				CF3500592BF91BD500D64D28 /* MultiSelector.swift in Sources */,
+				CF1F8A1C2BFC38E800305CE3 /* NewTournamentView.swift in Sources */,
+				CF1F8A1A2BFC385400305CE3 /* TournamentDetailView.swift in Sources */,
 				CF1F8A0A2BFBDEE300305CE3 /* PlayerSamples.swift in Sources */,
 				CF3500532BF918B800D64D28 /* NewPlayerView.swift in Sources */,
+				CF1F8A152BFC366700305CE3 /* TournamentListView.swift in Sources */,
 				CF3500612BF9210000D64D28 /* PlayerRowView.swift in Sources */,
+				CF1F8A122BFC355800305CE3 /* TournamentSamples.swift in Sources */,
 				CF1F8A0C2BFBDF7400305CE3 /* PreviewContainer.swift in Sources */,
 				CF35005F2BF91C9500D64D28 /* TCColorPicker.swift in Sources */,
 				CF35004B2BF90AE000D64D28 /* Player.swift in Sources */,
 				CF3500562BF91A4100D64D28 /* TCTextFieldStyle.swift in Sources */,
 				CF3500212BF90A0C00D64D28 /* TorneosCatanApp.swift in Sources */,
 				CF35005B2BF91BE800D64D28 /* MultiSelectionView.swift in Sources */,
+				CF1F8A1F2BFC3C7A00305CE3 /* MainTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

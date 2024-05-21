@@ -18,8 +18,6 @@ struct PlayerRowView: View {
 
 #Preview {
     let preview = Preview(Player.self)
-    return NavigationStack {
-        PlayerRowView(player: Player.samplePlayes[0])
-            .modelContainer(preview.container)
-    }
+    return PlayerRowView(player: Player.samplePlayes[0])
+        .modelContainer(preview.container)
 }

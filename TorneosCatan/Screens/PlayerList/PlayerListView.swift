@@ -10,7 +10,7 @@ import SwiftUI
 
 struct PlayerListView: View {
     @Environment(\.modelContext) private var modelContext
-    @Query private var players: [Player]
+    @Query(sort: \Player.name) private var players: [Player]
 
     @State var addPlayer = false
 
@@ -20,8 +20,7 @@ struct PlayerListView: View {
                 List {
                     ForEach(players) { player in
                         NavigationLink {
-                            Text(player.name)
-                                .foregroundStyle(player.color.color)
+                            PlayerDetailView(player: player)
                         } label: {
                             PlayerRowView(player: player)
                         }

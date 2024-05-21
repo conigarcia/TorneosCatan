@@ -22,7 +22,6 @@ struct MainTabView: View {
 #Preview {
     let preview = Preview(Tournament.self, Player.self)
     preview.addSamples(Tournament.sampleTournaments)
-    preview.addSamples(Player.samplePlayes)
     return MainTabView()
         .modelContainer(preview.container)
 }

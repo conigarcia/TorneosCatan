@@ -12,9 +12,13 @@ struct PlayerDetailView: View {
 
     var body: some View {
         Group {
-            Text(player.name)
-                .foregroundStyle(player.color.color)
-                .fontWeight(.bold)
+            if player.tournaments.isEmpty {
+                Text("No participa de ningún torneo")
+            } else {
+                ForEach(player.tournaments) { tournament in
+                    Text(tournament.name)
+                }
+            }
         }
         .navigationTitle(player.name)
     }

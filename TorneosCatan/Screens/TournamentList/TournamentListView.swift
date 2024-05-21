@@ -10,7 +10,7 @@ import SwiftUI
 
 struct TournamentListView: View {
     @Environment(\.modelContext) private var modelContext
-    @Query private var tournaments: [Tournament]
+    @Query(sort: \Tournament.name) private var tournaments: [Tournament]
     
     @State var addTournament = false
     

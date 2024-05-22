@@ -14,9 +14,13 @@ final class Player {
     let color: PlayerColor
     @Relationship(inverse: \Tournament.players)
     var tournaments: [Tournament] = []
+    @Relationship(deleteRule: .cascade)
+    var scores: [Score] = []
     
-    init(name: String, color: PlayerColor) {
+    init(name: String, color: PlayerColor, tournaments: [Tournament] = [], scores: [Score] = []) {
         self.name = name
         self.color = color
+        self.tournaments = tournaments
+        self.scores = scores
     }
 }

@@ -17,6 +17,8 @@
 		CF1F8A1A2BFC385400305CE3 /* TournamentDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1F8A192BFC385400305CE3 /* TournamentDetailView.swift */; };
 		CF1F8A1C2BFC38E800305CE3 /* NewTournamentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1F8A1B2BFC38E800305CE3 /* NewTournamentView.swift */; };
 		CF1F8A1F2BFC3C7A00305CE3 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1F8A1E2BFC3C7A00305CE3 /* MainTabView.swift */; };
+		CF1F8A212BFD7A4D00305CE3 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1F8A202BFD7A4D00305CE3 /* Score.swift */; };
+		CF1F8A232BFD830800305CE3 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1F8A222BFD830800305CE3 /* Game.swift */; };
 		CF3500212BF90A0C00D64D28 /* TorneosCatanApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3500202BF90A0C00D64D28 /* TorneosCatanApp.swift */; };
 		CF3500232BF90A0C00D64D28 /* PlayerListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3500222BF90A0C00D64D28 /* PlayerListView.swift */; };
 		CF3500252BF90A0D00D64D28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF3500242BF90A0D00D64D28 /* Assets.xcassets */; };
@@ -62,6 +64,8 @@
 		CF1F8A192BFC385400305CE3 /* TournamentDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentDetailView.swift; sourceTree = "<group>"; };
 		CF1F8A1B2BFC38E800305CE3 /* NewTournamentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTournamentView.swift; sourceTree = "<group>"; };
 		CF1F8A1E2BFC3C7A00305CE3 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		CF1F8A202BFD7A4D00305CE3 /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
+		CF1F8A222BFD830800305CE3 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		CF35001D2BF90A0C00D64D28 /* TorneosCatan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TorneosCatan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF3500202BF90A0C00D64D28 /* TorneosCatanApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TorneosCatanApp.swift; sourceTree = "<group>"; };
 		CF3500222BF90A0C00D64D28 /* PlayerListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerListView.swift; sourceTree = "<group>"; };
@@ -198,9 +202,11 @@
 		CF35004E2BF9180800D64D28 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				CF35004A2BF90AE000D64D28 /* Player.swift */,
 				CF35004C2BF90B8500D64D28 /* PlayerColor.swift */,
+				CF35004A2BF90AE000D64D28 /* Player.swift */,
 				CF1F8A0F2BFC339F00305CE3 /* Tournament.swift */,
+				CF1F8A202BFD7A4D00305CE3 /* Score.swift */,
+				CF1F8A222BFD830800305CE3 /* Game.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -406,6 +412,7 @@
 				CF1F8A0E2BFC2F9C00305CE3 /* PlayerDetailView.swift in Sources */,
 				CF3500592BF91BD500D64D28 /* MultiSelector.swift in Sources */,
 				CF1F8A1C2BFC38E800305CE3 /* NewTournamentView.swift in Sources */,
+				CF1F8A212BFD7A4D00305CE3 /* Score.swift in Sources */,
 				CF1F8A1A2BFC385400305CE3 /* TournamentDetailView.swift in Sources */,
 				CF1F8A0A2BFBDEE300305CE3 /* PlayerSamples.swift in Sources */,
 				CF3500532BF918B800D64D28 /* NewPlayerView.swift in Sources */,
@@ -415,6 +422,7 @@
 				CF1F8A0C2BFBDF7400305CE3 /* PreviewContainer.swift in Sources */,
 				CF35005F2BF91C9500D64D28 /* TCColorPicker.swift in Sources */,
 				CF35004B2BF90AE000D64D28 /* Player.swift in Sources */,
+				CF1F8A232BFD830800305CE3 /* Game.swift in Sources */,
 				CF3500562BF91A4100D64D28 /* TCTextFieldStyle.swift in Sources */,
 				CF3500212BF90A0C00D64D28 /* TorneosCatanApp.swift in Sources */,
 				CF35005B2BF91BE800D64D28 /* MultiSelectionView.swift in Sources */,

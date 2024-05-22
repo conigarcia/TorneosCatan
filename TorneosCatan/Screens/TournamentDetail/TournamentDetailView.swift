@@ -12,8 +12,19 @@ struct TournamentDetailView: View {
 
     var body: some View {
         Group {
-            ForEach(tournament.players) { player in
-                Text(player.name)
+            VStack {
+                HStack {
+                    ForEach(tournament.players) { player in
+                        Text(player.name)
+                    }
+                    .padding()
+                }
+                
+                Button("add game") {
+                    let scores = tournament.players.map { Score(player: $0, score: 10) }
+                    let game = Game(duration: 60*60, scores: scores)
+                    tournament.games.append(game)
+                }
             }
         }
         .navigationTitle(tournament.name)

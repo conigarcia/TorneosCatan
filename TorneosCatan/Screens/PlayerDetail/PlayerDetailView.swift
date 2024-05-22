@@ -12,11 +12,18 @@ struct PlayerDetailView: View {
 
     var body: some View {
         Group {
-            if player.tournaments.isEmpty {
-                Text("No participa de ningún torneo")
-            } else {
-                ForEach(player.tournaments) { tournament in
-                    Text(tournament.name)
+            VStack {
+                if player.scores.isEmpty {
+                    Text("no scores")
+                } else {
+                    ForEach(player.scores) { score in
+                        HStack {
+                            Text(score.player.name)
+                            Text("\(score.game?.date ?? Date())")
+                            Text(score.game?.tournament?.name ?? "xx")
+                            Text("\(score.score)")
+                        }
+                    }
                 }
             }
         }

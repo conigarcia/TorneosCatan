@@ -13,7 +13,7 @@ struct TCTextFieldStyle: TextFieldStyle {
             .padding(.leading)
             .frame(height: 50)
             .background(Color(.secondarySystemBackground))
-            .clipShape(.rect(cornerRadius: 15))
+            .clipShape(.rect(cornerRadius: 10))
     }
 }
 

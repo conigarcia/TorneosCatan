@@ -8,13 +8,15 @@
 import SwiftUI
 
 struct TournamentDetailView: View {
-    let tournament: Tournament
+    @Bindable var tournament: Tournament
+    
+    @State var addGame = false
     
     var body: some View {
         ScrollView {
             VStack {
                 Button {
-                    
+                    addGame = true
                 } label: {
                     Text("Nueva partida")
                         .frame(width: 250, height: 25)
@@ -22,55 +24,15 @@ struct TournamentDetailView: View {
                 .buttonStyle(TCButtonStyle())
                 .padding()
                 
-                HStack {
-                    Text("Jugadores")
-                        .font(.title)
-                        .fontWeight(.bold)
-                    Spacer()
-                }
-                .padding(.horizontal)
+                TournamentPlayersView(tournament: tournament)
                 
-                VStack(alignment: .leading) {
-                    ForEach(tournament.players) { player in
-                        NavigationLink {
-                            PlayerDetailView(player: player)
-                        } label: {
-                            HStack {
-                                PlayerRowView(player: player)
-                                    .foregroundStyle(player.color.color)
-                                
-                                Spacer()
-                                
-                                Image(systemName: "chevron.forward")
-                                    .foregroundStyle(Color(.tertiaryLabel))
-                                    .fontWeight(.semibold)
-                            }
-                            .padding()
-                            .frame(maxWidth: .infinity)
-                            .frame(height: 50)
-                            .background(Color(.secondarySystemBackground))
-                            .clipShape(.rect(cornerRadius: 10))
-                            .padding(.horizontal)
-                        }
-                    }
-                }
-                
-                HStack {
-                    Text("Partidas")
-                        .font(.title)
-                        .fontWeight(.bold)
-                    Spacer()
-                }
-                .padding()
-                
-                VStack(alignment: .leading) {
-                    ForEach(tournament.games) { game in
-                        Text("\(game.date.formatted(date: .abbreviated, time: .omitted))")
-                    }
-                }
+                TournamentGamesView(tournament: tournament)
                 
                 Spacer()
             }
+        }
+        .sheet(isPresented: $addGame) {
+            NewGameView(tournament: tournament)
         }
         .navigationTitle(tournament.name)
     }

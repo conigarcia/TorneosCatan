@@ -11,13 +11,13 @@ import SwiftData
 @Model
 final class Tournament {
     var name: String
+    
     var players: [Player] = []
     @Relationship(deleteRule: .cascade)
     var games: [Game] = []
     
-    init(name: String, players: [Player], games: [Game] = []) {
+    init(name: String, players: [Player]) {
         self.name = name
         self.players = players
-        self.games = games
     }
 }

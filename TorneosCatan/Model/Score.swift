@@ -10,14 +10,12 @@ import SwiftData
 
 @Model
 final class Score {
-    let player: Player
-    var game: Game?
     let score: Int
     
-    init(player: Player, game: Game? = nil, score: Int) {
-        // TODO: check that the player participates in the game's tournament
-        self.player = player
-        self.game = game
+    var player: Player?
+    var game: Game?
+    
+    init(score: Int) {
         self.score = score
     }
 }

@@ -38,7 +38,7 @@ struct MultiSelector<LabelView: View, Selectable: Identifiable & Hashable>: View
             .padding()
             .frame(maxWidth: .infinity)
             .background(Color(.secondarySystemBackground))
-            .clipShape(.rect(cornerRadius: 15))
+            .clipShape(.rect(cornerRadius: 10))
         }
     }
 

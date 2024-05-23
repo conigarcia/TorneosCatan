@@ -16,14 +16,7 @@ struct PlayerDetailView: View {
                 if player.scores.isEmpty {
                     Text("no scores")
                 } else {
-                    ForEach(player.scores) { score in
-                        HStack {
-                            Text(score.player.name)
-                            Text("\(score.game?.date ?? Date())")
-                            Text(score.game?.tournament?.name ?? "xx")
-                            Text("\(score.score)")
-                        }
-                    }
+                    Text("scores")
                 }
             }
         }
@@ -31,10 +24,10 @@ struct PlayerDetailView: View {
     }
 }
 
-#Preview {
-    let preview = Preview(Player.self)
-    return NavigationStack {
-        PlayerDetailView(player: Player.samplePlayes[0])
-            .modelContainer(preview.container)
-    }
-}
+//#Preview {
+//    let preview = Preview(Player.self)
+//    return NavigationStack {
+//        PlayerDetailView(player: Player.samplePlayes[0])
+//            .modelContainer(preview.container)
+//    }
+//}

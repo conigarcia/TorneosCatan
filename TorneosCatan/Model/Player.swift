@@ -12,15 +12,14 @@ import SwiftData
 final class Player {
     var name: String
     let color: PlayerColor
+    
     @Relationship(inverse: \Tournament.players)
     var tournaments: [Tournament] = []
     @Relationship(deleteRule: .cascade)
     var scores: [Score] = []
     
-    init(name: String, color: PlayerColor, tournaments: [Tournament] = [], scores: [Score] = []) {
+    init(name: String, color: PlayerColor) {
         self.name = name
         self.color = color
-        self.tournaments = tournaments
-        self.scores = scores
     }
 }

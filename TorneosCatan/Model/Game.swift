@@ -10,18 +10,17 @@ import SwiftData
 
 @Model
 final class Game {
-    var tournament: Tournament?
     let date: Date
     let duration: TimeInterval
+    
     @Relationship(deleteRule: .cascade)
     var scores: [Score] = []
+    var tournament: Tournament?
     
-    var players: [Player] { tournament?.players ?? [] }
+    var players: [Player] { tournament!.players }
     
-    init(tournament: Tournament? = nil, date: Date = Date(), duration: TimeInterval, scores: [Score]) {
-        self.tournament = tournament
+    init(date: Date, duration: TimeInterval) {
         self.date = date
         self.duration = duration
-        self.scores = scores
     }
 }

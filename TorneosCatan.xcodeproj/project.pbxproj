@@ -35,6 +35,13 @@
 		CF35005F2BF91C9500D64D28 /* TCColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF35005E2BF91C9500D64D28 /* TCColorPicker.swift */; };
 		CF3500612BF9210000D64D28 /* PlayerRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3500602BF9210000D64D28 /* PlayerRowView.swift */; };
 		CFB5A07E2BFE8CB800E7AA70 /* TCButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB5A07D2BFE8CB800E7AA70 /* TCButtonStyle.swift */; };
+		CFB5A0802BFF80C800E7AA70 /* TCRowModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB5A07F2BFF80C800E7AA70 /* TCRowModifier.swift */; };
+		CFB5A0822BFF845E00E7AA70 /* TournamentPlayersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB5A0812BFF845E00E7AA70 /* TournamentPlayersView.swift */; };
+		CFB5A0842BFF84D300E7AA70 /* TournamentGamesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB5A0832BFF84D300E7AA70 /* TournamentGamesView.swift */; };
+		CFB5A0872BFF854F00E7AA70 /* ListArrow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB5A0862BFF854F00E7AA70 /* ListArrow.swift */; };
+		CFB5A0892BFF882B00E7AA70 /* NewGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB5A0882BFF882B00E7AA70 /* NewGameView.swift */; };
+		CFB5A08E2BFFA5B500E7AA70 /* GameDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB5A08D2BFFA5B500E7AA70 /* GameDetailView.swift */; };
+		CFB5A0902BFFA6E000E7AA70 /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB5A08F2BFFA6E000E7AA70 /* Title.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +93,13 @@
 		CF35005E2BF91C9500D64D28 /* TCColorPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCColorPicker.swift; sourceTree = "<group>"; };
 		CF3500602BF9210000D64D28 /* PlayerRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerRowView.swift; sourceTree = "<group>"; };
 		CFB5A07D2BFE8CB800E7AA70 /* TCButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCButtonStyle.swift; sourceTree = "<group>"; };
+		CFB5A07F2BFF80C800E7AA70 /* TCRowModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCRowModifier.swift; sourceTree = "<group>"; };
+		CFB5A0812BFF845E00E7AA70 /* TournamentPlayersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentPlayersView.swift; sourceTree = "<group>"; };
+		CFB5A0832BFF84D300E7AA70 /* TournamentGamesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentGamesView.swift; sourceTree = "<group>"; };
+		CFB5A0862BFF854F00E7AA70 /* ListArrow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListArrow.swift; sourceTree = "<group>"; };
+		CFB5A0882BFF882B00E7AA70 /* NewGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewGameView.swift; sourceTree = "<group>"; };
+		CFB5A08D2BFFA5B500E7AA70 /* GameDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailView.swift; sourceTree = "<group>"; };
+		CFB5A08F2BFFA6E000E7AA70 /* Title.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Title.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +141,9 @@
 			isa = PBXGroup;
 			children = (
 				CF1F8A192BFC385400305CE3 /* TournamentDetailView.swift */,
+				CFB5A0812BFF845E00E7AA70 /* TournamentPlayersView.swift */,
+				CFB5A0832BFF84D300E7AA70 /* TournamentGamesView.swift */,
+				CFB5A0882BFF882B00E7AA70 /* NewGameView.swift */,
 			);
 			path = TournamentDetail;
 			sourceTree = "<group>";
@@ -166,6 +183,7 @@
 				CF35004E2BF9180800D64D28 /* Model */,
 				CF3500502BF9182C00D64D28 /* Screens */,
 				CF3500542BF91A3100D64D28 /* Styles */,
+				CFB5A0852BFF852700E7AA70 /* AuxViews */,
 				CF35005C2BF91C5000D64D28 /* Utilities */,
 				CF3500242BF90A0D00D64D28 /* Assets.xcassets */,
 				CF3500262BF90A0D00D64D28 /* Preview Content */,
@@ -207,8 +225,8 @@
 				CF35004C2BF90B8500D64D28 /* PlayerColor.swift */,
 				CF35004A2BF90AE000D64D28 /* Player.swift */,
 				CF1F8A0F2BFC339F00305CE3 /* Tournament.swift */,
-				CF1F8A202BFD7A4D00305CE3 /* Score.swift */,
 				CF1F8A222BFD830800305CE3 /* Game.swift */,
+				CF1F8A202BFD7A4D00305CE3 /* Score.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -231,6 +249,7 @@
 				CF3500512BF9183600D64D28 /* PlayerDetail */,
 				CF1F8A132BFC364200305CE3 /* TournamentList */,
 				CF1F8A182BFC383000305CE3 /* TournamentDetail */,
+				CFB5A08C2BFFA59F00E7AA70 /* GameDetail */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -248,6 +267,7 @@
 			children = (
 				CF3500552BF91A4100D64D28 /* TCTextFieldStyle.swift */,
 				CFB5A07D2BFE8CB800E7AA70 /* TCButtonStyle.swift */,
+				CFB5A07F2BFF80C800E7AA70 /* TCRowModifier.swift */,
 			);
 			path = Styles;
 			sourceTree = "<group>";
@@ -276,6 +296,23 @@
 				CF35005E2BF91C9500D64D28 /* TCColorPicker.swift */,
 			);
 			path = ColorPicker;
+			sourceTree = "<group>";
+		};
+		CFB5A0852BFF852700E7AA70 /* AuxViews */ = {
+			isa = PBXGroup;
+			children = (
+				CFB5A0862BFF854F00E7AA70 /* ListArrow.swift */,
+				CFB5A08F2BFFA6E000E7AA70 /* Title.swift */,
+			);
+			path = AuxViews;
+			sourceTree = "<group>";
+		};
+		CFB5A08C2BFFA59F00E7AA70 /* GameDetail */ = {
+			isa = PBXGroup;
+			children = (
+				CFB5A08D2BFFA5B500E7AA70 /* GameDetailView.swift */,
+			);
+			path = GameDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -418,8 +455,12 @@
 				CF1F8A212BFD7A4D00305CE3 /* Score.swift in Sources */,
 				CF1F8A1A2BFC385400305CE3 /* TournamentDetailView.swift in Sources */,
 				CF1F8A0A2BFBDEE300305CE3 /* PlayerSamples.swift in Sources */,
+				CFB5A0902BFFA6E000E7AA70 /* Title.swift in Sources */,
+				CFB5A0872BFF854F00E7AA70 /* ListArrow.swift in Sources */,
 				CF3500532BF918B800D64D28 /* NewPlayerView.swift in Sources */,
+				CFB5A0842BFF84D300E7AA70 /* TournamentGamesView.swift in Sources */,
 				CF1F8A152BFC366700305CE3 /* TournamentListView.swift in Sources */,
+				CFB5A0802BFF80C800E7AA70 /* TCRowModifier.swift in Sources */,
 				CF3500612BF9210000D64D28 /* PlayerRowView.swift in Sources */,
 				CF1F8A122BFC355800305CE3 /* TournamentSamples.swift in Sources */,
 				CF1F8A0C2BFBDF7400305CE3 /* PreviewContainer.swift in Sources */,
@@ -428,9 +469,12 @@
 				CF1F8A232BFD830800305CE3 /* Game.swift in Sources */,
 				CF3500562BF91A4100D64D28 /* TCTextFieldStyle.swift in Sources */,
 				CF3500212BF90A0C00D64D28 /* TorneosCatanApp.swift in Sources */,
+				CFB5A08E2BFFA5B500E7AA70 /* GameDetailView.swift in Sources */,
 				CF35005B2BF91BE800D64D28 /* MultiSelectionView.swift in Sources */,
 				CF1F8A1F2BFC3C7A00305CE3 /* MainTabView.swift in Sources */,
 				CFB5A07E2BFE8CB800E7AA70 /* TCButtonStyle.swift in Sources */,
+				CFB5A0822BFF845E00E7AA70 /* TournamentPlayersView.swift in Sources */,
+				CFB5A0892BFF882B00E7AA70 /* NewGameView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

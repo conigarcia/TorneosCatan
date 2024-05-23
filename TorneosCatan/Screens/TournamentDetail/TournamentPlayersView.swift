@@ -35,5 +35,7 @@ struct TournamentPlayersView: View {
 }
 
 //#Preview {
-//    TournamentPlayersView()
+//    let preview = Preview(Tournament.self)
+//    return TournamentPlayersView(tournament: Tournament.sampleTournaments[0])
+//        .modelContainer(preview.container)
 //}

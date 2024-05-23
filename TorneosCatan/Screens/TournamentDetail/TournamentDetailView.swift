@@ -39,8 +39,7 @@ struct TournamentDetailView: View {
 }
 
 //#Preview {
-//    let preview = Preview(Tournament.self, Player.self)
-//    preview.addSamples(Tournament.sampleTournaments)
+//    let preview = Preview(Tournament.self)
 //    return NavigationStack {
 //        TournamentDetailView(tournament: Tournament.sampleTournaments[0])
 //            .modelContainer(preview.container)

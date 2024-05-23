@@ -45,5 +45,9 @@ struct GameDetailView: View {
 }
 
 //#Preview {
-//    GameDetailView()
+//    let preview = Preview(Game.self)
+//    return NavigationStack {
+//        GameDetailView(game: Game.sampleGames[1])
+//           .modelContainer(preview.container)
+//    }
 //}

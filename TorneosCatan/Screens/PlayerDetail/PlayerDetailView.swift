@@ -24,10 +24,10 @@ struct PlayerDetailView: View {
     }
 }
 
-//#Preview {
-//    let preview = Preview(Player.self)
-//    return NavigationStack {
-//        PlayerDetailView(player: Player.samplePlayes[0])
-//            .modelContainer(preview.container)
-//    }
-//}
+#Preview {
+    let preview = Preview(Player.self)
+    return NavigationStack {
+        PlayerDetailView(player: Player.samplePlayes[0])
+            .modelContainer(preview.container)
+    }
+}

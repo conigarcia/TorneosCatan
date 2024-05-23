@@ -99,8 +99,10 @@ struct NewGameView: View {
 }
 
 //#Preview {
-//    Text("")
+//    let preview = Preview(Tournament.self)
+//    return Text("")
 //        .sheet(isPresented: .constant(true)) {
-//            NewGameView()
+//            NewGameView(tournament: Tournament.sampleTournaments[0])
 //        }
+//        .modelContainer(preview.container)
 //}

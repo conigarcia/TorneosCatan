@@ -34,6 +34,7 @@
 		CF35005B2BF91BE800D64D28 /* MultiSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF35005A2BF91BE800D64D28 /* MultiSelectionView.swift */; };
 		CF35005F2BF91C9500D64D28 /* TCColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF35005E2BF91C9500D64D28 /* TCColorPicker.swift */; };
 		CF3500612BF9210000D64D28 /* PlayerRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3500602BF9210000D64D28 /* PlayerRowView.swift */; };
+		CF4077522C0235F700869154 /* TournamentScoresView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4077512C0235F700869154 /* TournamentScoresView.swift */; };
 		CFB5A07E2BFE8CB800E7AA70 /* TCButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB5A07D2BFE8CB800E7AA70 /* TCButtonStyle.swift */; };
 		CFB5A0802BFF80C800E7AA70 /* TCRowModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB5A07F2BFF80C800E7AA70 /* TCRowModifier.swift */; };
 		CFB5A0822BFF845E00E7AA70 /* TournamentPlayersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB5A0812BFF845E00E7AA70 /* TournamentPlayersView.swift */; };
@@ -100,6 +101,7 @@
 		CF35005A2BF91BE800D64D28 /* MultiSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiSelectionView.swift; sourceTree = "<group>"; };
 		CF35005E2BF91C9500D64D28 /* TCColorPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCColorPicker.swift; sourceTree = "<group>"; };
 		CF3500602BF9210000D64D28 /* PlayerRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerRowView.swift; sourceTree = "<group>"; };
+		CF4077512C0235F700869154 /* TournamentScoresView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentScoresView.swift; sourceTree = "<group>"; };
 		CFB5A07D2BFE8CB800E7AA70 /* TCButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCButtonStyle.swift; sourceTree = "<group>"; };
 		CFB5A07F2BFF80C800E7AA70 /* TCRowModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCRowModifier.swift; sourceTree = "<group>"; };
 		CFB5A0812BFF845E00E7AA70 /* TournamentPlayersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentPlayersView.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 			children = (
 				CF1F8A192BFC385400305CE3 /* TournamentDetailView.swift */,
 				CFB5A0972C017AC400E7AA70 /* TournamentRankingView.swift */,
+				CF4077512C0235F700869154 /* TournamentScoresView.swift */,
 				CFB5A0832BFF84D300E7AA70 /* TournamentGamesView.swift */,
 				CFB5A0812BFF845E00E7AA70 /* TournamentPlayersView.swift */,
 				CFB5A0882BFF882B00E7AA70 /* NewGameView.swift */,
@@ -495,6 +498,7 @@
 				CFB5A0802BFF80C800E7AA70 /* TCRowModifier.swift in Sources */,
 				CF3500612BF9210000D64D28 /* PlayerRowView.swift in Sources */,
 				CFB5A0922BFFC94800E7AA70 /* GameSamples.swift in Sources */,
+				CF4077522C0235F700869154 /* TournamentScoresView.swift in Sources */,
 				CF1F8A122BFC355800305CE3 /* TournamentSamples.swift in Sources */,
 				CF1F8A0C2BFBDF7400305CE3 /* PreviewContainer.swift in Sources */,
 				CFB5A0A12C01B13700E7AA70 /* EditGameView.swift in Sources */,

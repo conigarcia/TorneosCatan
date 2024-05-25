@@ -11,6 +11,8 @@ import SwiftUI
 struct GameListView: View {
     let tournament: Tournament
     
+    @State var expanded = false
+    
     var body: some View {
         ScrollView {
             ForEach(tournament.games.sorted {$0.date > $1.date}) { game in
@@ -18,7 +20,22 @@ struct GameListView: View {
                     GameDetailView(game: game)
                 } label: {
                     HStack {
-                        GameRowView(game: game)
+                        VStack(alignment: .leading) {
+                            GameRowView(game: game)
+                            
+                            if expanded {
+                                HStack {
+                                    ForEach(game.scores.sorted {$0.player!.name < $1.player!.name}) { score in
+                                        Text("\(score.player!.name.prefix(2)): \(score.score)")
+                                            .font(.body.smallCaps())
+                                            .fontWeight(.medium)
+                                            .foregroundStyle(score.player!.color.color)
+                                        Spacer()
+                                    }
+                                }
+                                .padding(.top, 6)
+                            }
+                        }
                         
                         Spacer()
                         
@@ -29,6 +46,11 @@ struct GameListView: View {
             }
         }
         .navigationTitle("Partidas")
+        .toolbar {
+            Button("\(expanded ? "Contraer" : "Expandir")") {
+                expanded.toggle()
+            }
+        }
     }
 }
 

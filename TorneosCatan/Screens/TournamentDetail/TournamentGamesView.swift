@@ -8,27 +8,43 @@
 import SwiftUI
 
 struct TournamentGamesView: View {
-    let tournament: Tournament
+    @Bindable var tournament: Tournament
     
     var body: some View {
-        Title(title: "Partidas")
-            .padding(.horizontal)
-            .padding(.top)
-        
-        VStack(alignment: .leading) {
-            ForEach(tournament.games) { game in
-                NavigationLink {
-                    GameDetailView(game: game)
-                } label: {
-                    HStack {
-                        Text("\(game.date.formatted(date: .abbreviated, time: .omitted))")
-                            .foregroundStyle(Color(.label))
-                        
-                        Spacer()
-                        
-                        ListArrow()
+        VStack {
+            Title(title: "Partidas")
+                .padding(.horizontal)
+            
+            VStack(alignment: .leading) {
+                ForEach(tournament.games.sorted {$0.date > $1.date}.prefix(3)) { game in
+                    NavigationLink {
+                        GameDetailView(game: game)
+                    } label: {
+                        HStack {
+                            GameRowView(game: game)
+                            
+                            Spacer()
+                            
+                            ListArrow()
+                        }
+                        .rowStyle()
                     }
-                    .rowStyle()
+                }
+                
+                if tournament.games.count > 3 {
+                    NavigationLink {
+                        GameListView(tournament: tournament)
+                    } label: {
+                        HStack {
+                            Text("Ver más")
+                                .foregroundStyle(Color(.secondaryLabel))
+                            
+                            Spacer()
+                            
+                            ListArrow()
+                        }
+                        .rowStyle()
+                    }
                 }
             }
         }

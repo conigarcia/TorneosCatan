@@ -30,7 +30,6 @@ struct TournamentListView: View {
             }
             .sheet(isPresented: $addTournament) {
                 NewTournamentView()
-                    .presentationDetents([.medium])
             }
             .navigationTitle("Torneos")
             .toolbar {

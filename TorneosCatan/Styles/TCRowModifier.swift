@@ -12,7 +12,7 @@ struct Row: ViewModifier {
         content
             .padding()
             .frame(maxWidth: .infinity)
-            .frame(height: 50)
+            .frame(minHeight: 50)
             .background(Color(.secondarySystemBackground))
             .clipShape(.rect(cornerRadius: 10))
             .padding(.horizontal)

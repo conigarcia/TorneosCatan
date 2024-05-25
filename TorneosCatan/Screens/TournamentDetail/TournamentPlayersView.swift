@@ -11,23 +11,25 @@ struct TournamentPlayersView: View {
     let tournament: Tournament
     
     var body: some View {
-        Title(title: "Jugadores")
-            .padding(.horizontal)
-        
-        VStack(alignment: .leading) {
-            ForEach(tournament.players) { player in
-                NavigationLink {
-                    PlayerDetailView(player: player)
-                } label: {
-                    HStack {
-                        PlayerRowView(player: player)
-                            .foregroundStyle(player.color.color)
-                        
-                        Spacer()
-                        
-                        ListArrow()
+        VStack {
+            Title(title: "Jugadores")
+                .padding(.horizontal)
+            
+            VStack(alignment: .leading) {
+                ForEach(tournament.players.sorted { $0.name < $1.name }) { player in
+                    NavigationLink {
+                        PlayerDetailView(player: player, tournament: tournament)
+                    } label: {
+                        HStack {
+                            PlayerRowView(player: player)
+                                .foregroundStyle(player.color.color)
+                            
+                            Spacer()
+                            
+                            ListArrow()
+                        }
+                        .rowStyle()
                     }
-                    .rowStyle()
                 }
             }
         }

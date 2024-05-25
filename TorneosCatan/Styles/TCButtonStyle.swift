@@ -16,7 +16,6 @@ struct TCButtonStyle: ButtonStyle {
             .padding()
             .background(Color(.accent))
             .clipShape(.rect(cornerRadius: 15))
-            .shadow(radius: 2)
     }
 }
 

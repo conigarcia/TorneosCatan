@@ -17,10 +17,11 @@ struct NewGameView: View {
     @State var end = Date()
     @State var players = [Player]()
     @State var points = [String]()
+    @State var bank: Player?
 
     var body: some View {
         NavigationStack {
-            Group {
+            ScrollView {
                 VStack {
                     GroupBox {
                         DatePicker("Fecha", selection: $date, displayedComponents: [.date])
@@ -41,7 +42,17 @@ struct NewGameView: View {
                         HStack {
                             HStack {
                                 PlayerRowView(player: player)
+                                
                                 Spacer()
+                                
+                                Button {
+                                    bank = player
+                                } label: {
+                                    Text("banco")
+                                        .font(.body.smallCaps())
+                                        .fontWeight(bank == player ? .bold : .medium)
+                                        .foregroundStyle(bank == player ? Color(.accent) : Color(.tertiaryLabel))
+                                }
                             }
                             .rowStyle()
                             
@@ -72,7 +83,7 @@ struct NewGameView: View {
                     Button {
                         var duration = start.distance(to: end)
                         if duration < 0 { duration = 60*60*24 + duration }
-                        let game = Game(date: date, duration: duration)
+                        let game = Game(date: date, duration: duration, bank: bank)
 
                         for (idx, player) in players.enumerated() {
                             let score = Score(score: Int(points[idx]) ?? 0)

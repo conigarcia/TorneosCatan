@@ -14,22 +14,28 @@ struct TournamentDetailView: View {
     
     var body: some View {
         ScrollView {
-            VStack {
-                Button {
-                    addGame = true
-                } label: {
-                    Text("Nueva partida")
-                        .frame(width: 250, height: 25)
-                }
-                .buttonStyle(TCButtonStyle())
-                .padding()
-                
-                TournamentPlayersView(tournament: tournament)
+            
+            Button {
+                addGame = true
+            } label: {
+                Text("Nueva partida")
+                    .frame(width: 250, height: 25)
+            }
+            .buttonStyle(TCButtonStyle())
+            .padding()
+            
+            if !tournament.games.isEmpty {
+                TournamentRankingView(tournament: tournament)
+                    .padding(.top)
                 
                 TournamentGamesView(tournament: tournament)
-                
-                Spacer()
+                    .padding(.top)
             }
+
+            TournamentPlayersView(tournament: tournament)
+                .padding(.top)
+            
+            Spacer()
         }
         .sheet(isPresented: $addGame) {
             NewGameView(tournament: tournament)

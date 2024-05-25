@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct GameDetailView: View {
-    let game: Game
+    @Bindable var game: Game
+    
+    @State var editGame = false
     
     var body: some View {
-        Group {
+        ScrollView {
             VStack(alignment: .center) {
                 Title(title: "Duración:")
                     .padding(.top)
@@ -22,11 +24,22 @@ struct GameDetailView: View {
                     .fontWeight(.medium)
                     .rowStyle()
                 
+                if let bank = game.bank {
+                    Title(title: "Banco:")
+                        .padding(.top)
+                        .padding(.horizontal)
+                    
+                    Text("\(bank.name)")
+                        .font(.title2)
+                        .fontWeight(.medium)
+                        .rowStyle()
+                }
+                
                 Title(title: "Puntajes:")
                     .padding(.top)
                     .padding(.horizontal)
                 
-                ForEach(game.scores) { score in
+                ForEach(game.scores.sorted { $0.score > $1.score }) { score in
                     HStack {
                         PlayerRowView(player: score.player!)
                             .foregroundStyle(score.player!.color.color)
@@ -40,7 +53,16 @@ struct GameDetailView: View {
                 Spacer()
             }
         }
+        .sheet(isPresented: $editGame) {
+            EditGameView(game: game)
+                .presentationDetents([.height(300)])
+        }
         .navigationTitle("Partida \(game.date.formatted(date: .abbreviated, time: .omitted))")
+        .toolbar {
+            Button("Edit") {
+                editGame = true
+            }
+        }
     }
 }
 

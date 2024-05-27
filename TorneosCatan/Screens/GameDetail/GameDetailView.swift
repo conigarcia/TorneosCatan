@@ -12,6 +12,18 @@ struct GameDetailView: View {
     
     @State var editGame = false
     
+    var durationString: String {
+        let hours = Int(game.duration/3600)
+        let minutes = Int((game.duration/3600).truncatingRemainder(dividingBy: 1) * 60)
+        if hours == 0 && minutes == 0 {
+            return "???"
+        } else {
+            let hoursString = hours == 1 ? "hora" : "horas"
+            let minutesString = minutes == 1 ? "minuto" : "minutos"
+            return "\(hours) \(hoursString) \(minutes == 0 ? "" : "\(minutes) \(minutesString)")"
+        }
+    }
+    
     var body: some View {
         ScrollView {
             VStack(alignment: .center) {
@@ -19,7 +31,7 @@ struct GameDetailView: View {
                     .padding(.top)
                     .padding(.horizontal)
                 
-                Text("\(Int(game.duration/(60*60))) horas \(Int((game.duration/(60*60)).truncatingRemainder(dividingBy: 1) * 60)) minutos")
+                Text(durationString)
                     .font(.title2)
                     .fontWeight(.medium)
                     .rowStyle()

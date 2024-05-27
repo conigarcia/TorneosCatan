@@ -37,7 +37,7 @@ struct NewGameView: View {
                     }
                     .padding()
                     .onChange(of: date) { oldValue, newValue in
-                        end = date.addingTimeInterval(10800)
+                        end = date
                     }
                     
                     ForEach(Array(players.enumerated()), id: \.offset) { (idx, player) in
@@ -107,7 +107,7 @@ struct NewGameView: View {
                 players.append(player)
                 points.append("")
             }
-            end = date.addingTimeInterval(10800)
+            end = date
         }
     }
 }

@@ -24,6 +24,7 @@ struct TorneosCatanApp: App {
     var body: some Scene {
         WindowGroup {
             MainTabView()
+                .preferredColorScheme(.dark)
         }
         .modelContainer(sharedModelContainer)
     }

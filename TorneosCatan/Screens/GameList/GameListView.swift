@@ -42,6 +42,7 @@ struct GameListView: View {
                         ListArrow()
                     }
                     .rowStyle()
+                    .animation(.snappy, value: expanded)
                 }
             }
         }

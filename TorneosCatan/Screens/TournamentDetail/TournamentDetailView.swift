@@ -28,7 +28,7 @@ struct TournamentDetailView: View {
                 TournamentRankingView(tournament: tournament)
                     .padding(.top)
                 
-                TournamentScoresView(tournament: tournament)
+                TournamentScoresView(tournament: tournament, games: 4)
                     .padding(.top)
                 
                 TournamentGamesView(tournament: tournament)

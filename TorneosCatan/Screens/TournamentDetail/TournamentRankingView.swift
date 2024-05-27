@@ -13,8 +13,20 @@ struct TournamentRankingView: View {
     
     var body: some View {
         VStack {
-            Title(title: "Ranking")
-                .padding(.horizontal)
+            HStack {
+                Title(title: "Ranking")
+                Spacer()
+                NavigationLink {
+                    RankingView(tournament: tournament)
+                } label: {
+                    HStack {
+                        Text("Historial")
+                        Image(systemName: "chevron.right")
+                    }
+                    .fontWeight(.medium)
+                }
+            }
+            .padding(.horizontal)
             
             Chart {
                 ForEach(tournament.scores.sorted {$0.1 > $1.1}, id: \.key) { player, score in

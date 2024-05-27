@@ -10,7 +10,8 @@ import SwiftUI
 
 struct TournamentScoresView: View {
     let tournament: Tournament
-    let games: Int
+    
+    var sortedGames: [Game] { tournament.games.sorted{$0.date < $1.date} }
     
     var dateFormatter: DateFormatter {
         let df = DateFormatter()
@@ -24,7 +25,7 @@ struct TournamentScoresView: View {
                 .padding(.horizontal)
             
             Chart {
-                ForEach(tournament.games.sorted{$0.date < $1.date}.suffix(games)) { game in
+                ForEach(sortedGames) { game in
                     ForEach(game.scores) { score in
                         PointMark(
                             x: .value("Partida", dateFormatter.string(from: game.date)),
@@ -45,6 +46,9 @@ struct TournamentScoresView: View {
             .chartSymbolScale(range: [.circle])
             .chartYScale(domain: 0...20)
             .chartLegend(.hidden)
+            .chartScrollableAxes(.horizontal)
+            .chartXVisibleDomain(length: 3)
+            .defaultScrollAnchor(.trailing)
             .frame(height: 250)
             .padding(.horizontal)
         }

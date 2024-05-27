@@ -41,7 +41,11 @@ struct PlayerScoresView: View {
             }
             .chartSymbolScale(range: [.circle, .circle])
             .chartYScale(domain: 0...20)
+            .chartXAxis(.hidden)
             .chartLegend(.hidden)
+            .chartScrollableAxes(.horizontal)
+            .chartXVisibleDomain(length: 20)
+            .defaultScrollAnchor(.trailing)
             .frame(height: 250)
             .padding(.horizontal)
         }

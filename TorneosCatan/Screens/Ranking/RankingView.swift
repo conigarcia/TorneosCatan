@@ -17,6 +17,8 @@ struct RankingView: View {
     
     var body: some View {
         VStack {
+            Spacer()
+            
             Title(title: "\(tournament.games.sorted(by: {$0.date < $1.date})[games-1].date.formatted(date: .abbreviated, time: .omitted))")
                 .padding(.horizontal)
             
@@ -56,6 +58,8 @@ struct RankingView: View {
                 }
             }
             
+            Spacer()
+            
             HStack {
                 Button {
                     games -= 1
@@ -88,7 +92,7 @@ struct RankingView: View {
             .fontWeight(.semibold)
             .rowStyle()
             .frame(height: 55)
-            .padding(.top)
+            .padding(.vertical)
         }
         .navigationTitle("Historial de rankings")
     }

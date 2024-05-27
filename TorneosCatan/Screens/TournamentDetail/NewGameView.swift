@@ -13,7 +13,6 @@ struct NewGameView: View {
     @Bindable var tournament: Tournament
     
     @State var date = Date()
-    @State var start = Date()
     @State var end = Date()
     @State var players = [Player]()
     @State var points = [String]()
@@ -28,7 +27,7 @@ struct NewGameView: View {
                             .datePickerStyle(.compact)
                             .fontWeight(.medium)
                         
-                        DatePicker("Hora inicio", selection: $start, displayedComponents: [.hourAndMinute])
+                        DatePicker("Hora inicio", selection: $date, displayedComponents: [.hourAndMinute])
                             .datePickerStyle(.compact)
                             .fontWeight(.medium)
                         
@@ -37,6 +36,9 @@ struct NewGameView: View {
                             .fontWeight(.medium)
                     }
                     .padding()
+                    .onChange(of: date) { oldValue, newValue in
+                        end = date.addingTimeInterval(10800)
+                    }
                     
                     ForEach(Array(players.enumerated()), id: \.offset) { (idx, player) in
                         HStack {
@@ -81,7 +83,7 @@ struct NewGameView: View {
 
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
-                        var duration = start.distance(to: end)
+                        var duration = date.distance(to: end)
                         if duration < 0 { duration = 60*60*24 + duration }
                         let game = Game(date: date, duration: duration, bank: bank)
 
@@ -105,6 +107,7 @@ struct NewGameView: View {
                 players.append(player)
                 points.append("")
             }
+            end = date.addingTimeInterval(10800)
         }
     }
 }

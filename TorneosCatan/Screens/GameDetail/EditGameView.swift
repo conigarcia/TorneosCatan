@@ -13,7 +13,6 @@ struct EditGameView: View {
     @Bindable var game: Game
     
     @State var date = Date()
-    @State var start = Date()
     @State var end = Date()
     
     var body: some View {
@@ -25,7 +24,7 @@ struct EditGameView: View {
                             .datePickerStyle(.compact)
                             .fontWeight(.medium)
                         
-                        DatePicker("Hora inicio", selection: $start, displayedComponents: [.hourAndMinute])
+                        DatePicker("Hora inicio", selection: $date, displayedComponents: [.hourAndMinute])
                             .datePickerStyle(.compact)
                             .fontWeight(.medium)
                         
@@ -34,7 +33,10 @@ struct EditGameView: View {
                             .fontWeight(.medium)
                     }
                     .padding()
-                    
+                    .onChange(of: date) { oldValue, newValue in
+                        end = date.addingTimeInterval(game.duration)
+                    }
+
                     Spacer()
                 }
             }
@@ -51,7 +53,7 @@ struct EditGameView: View {
 
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
-                        var duration = start.distance(to: end)
+                        var duration = date.distance(to: end)
                         if duration < 0 { duration = 60*60*24 + duration }
                         game.date = date
                         game.duration = duration
@@ -65,7 +67,7 @@ struct EditGameView: View {
         }
         .onAppear {
             date = game.date
-            end = start.addingTimeInterval(game.duration)
+            end = date.addingTimeInterval(game.duration)
         }
     }
 }

@@ -13,9 +13,13 @@ struct RankingView: View {
     
     @State var games = 1
     @State var play = false
-
+    let timer = Timer.publish(every: 0.8, on: .main, in: .common).autoconnect()
+    
     var body: some View {
         VStack {
+            Title(title: "\(tournament.games.sorted(by: {$0.date < $1.date})[games-1].date.formatted(date: .abbreviated, time: .omitted))")
+                .padding(.horizontal)
+            
             Chart {
                 ForEach(tournament.scores(for: games).sorted {$0.1 > $1.1}, id: \.key) { player, score in
                     BarMark(
@@ -24,19 +28,15 @@ struct RankingView: View {
                         width: .inset(4)
                     )
                     .annotation(position: .overlay) {
-                        NavigationLink {
-                            Text("hola")
-                        } label: {
-                            HStack {
-                                Text("\(player.name)")
-                                
-                                Spacer()
-                                
-                                Text("\(score)")
-                            }
-                            .fontWeight(.semibold)
-                            .padding()
+                        HStack {
+                            Text("\(player.name)")
+                            
+                            Spacer()
+                            
+                            Text("\(score)")
                         }
+                        .fontWeight(.semibold)
+                        .padding()
                     }
                     .foregroundStyle(player.color.color)
                     .clipShape(.rect(bottomTrailingRadius: 8, topTrailingRadius: 8))
@@ -46,6 +46,15 @@ struct RankingView: View {
             .frame(height: CGFloat(tournament.players.count * 60))
             .padding(.horizontal)
             .animation(.snappy, value: games)
+            .onReceive(timer) { time in
+                if play {
+                    if games == tournament.games.count {
+                        play = false
+                    } else {
+                        games += 1
+                    }
+                }
+            }
             
             HStack {
                 Button {
@@ -53,25 +62,27 @@ struct RankingView: View {
                 } label: {
                     Image(systemName: "arrow.left")
                 }
-                .disabled(games == 1)
+                .disabled(games == 1 || play)
                 
                 Spacer()
                 
                 Button {
+                    if games == tournament.games.count {
+                        games = 1
+                    }
                     play.toggle()
                 } label: {
                     Image(systemName: "\(play ? "pause.fill" : "play.fill")")
                 }
-                .animation(.none, value: play)
                 
                 Spacer()
-
+                
                 Button {
                     games += 1
                 } label: {
                     Image(systemName: "arrow.right")
                 }
-                .disabled(games == tournament.games.count)
+                .disabled(games == tournament.games.count || play)
             }
             .font(.title)
             .fontWeight(.semibold)

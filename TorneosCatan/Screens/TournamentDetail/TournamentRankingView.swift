@@ -36,19 +36,15 @@ struct TournamentRankingView: View {
                         width: .inset(4)
                     )
                     .annotation(position: .overlay) {
-                        NavigationLink {
-                            Text("hola")
-                        } label: {
-                            HStack {
-                                Text("\(player.name)")
-                                
-                                Spacer()
-                                
-                                Text("\(score)")
-                            }
-                            .fontWeight(.semibold)
-                            .padding()
+                        HStack {
+                            Text("\(player.name)")
+                            
+                            Spacer()
+                            
+                            Text("\(score)")
                         }
+                        .fontWeight(.semibold)
+                        .padding()
                     }
                     .foregroundStyle(player.color.color)
                     .clipShape(.rect(bottomTrailingRadius: 8, topTrailingRadius: 8))

@@ -44,7 +44,7 @@ struct PlayerScoresView: View {
             .chartXAxis(.hidden)
             .chartLegend(.hidden)
             .chartScrollableAxes(.horizontal)
-            .chartXVisibleDomain(length: 20)
+            .chartXVisibleDomain(length: 20 * player.tournaments.count)
             .defaultScrollAnchor(.trailing)
             .frame(height: 250)
             .padding(.horizontal)

@@ -36,9 +36,6 @@ struct NewGameView: View {
                             .fontWeight(.medium)
                     }
                     .padding()
-                    .onChange(of: date) { oldValue, newValue in
-                        end = date
-                    }
                     
                     ForEach(Array(players.enumerated()), id: \.offset) { (idx, player) in
                         HStack {

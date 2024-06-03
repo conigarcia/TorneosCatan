@@ -15,7 +15,7 @@ struct PlayerScoresView: View {
     
     var dateFormatter: DateFormatter {
         let df = DateFormatter()
-        df.dateFormat = "dd/MM"
+        df.dateFormat = "dd/MM hh:mm"
         return df
     }
 

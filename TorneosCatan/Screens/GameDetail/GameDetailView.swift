@@ -67,7 +67,6 @@ struct GameDetailView: View {
         }
         .sheet(isPresented: $editGame) {
             EditGameView(game: game)
-                .presentationDetents([.height(300)])
         }
         .navigationTitle("Partida \(game.date.formatted(date: .abbreviated, time: .omitted))")
         .toolbar {

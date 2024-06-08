@@ -10,7 +10,7 @@ import SwiftData
 
 @Model
 final class Score {
-    let score: Int
+    var score: Int
     
     var player: Player?
     var game: Game?

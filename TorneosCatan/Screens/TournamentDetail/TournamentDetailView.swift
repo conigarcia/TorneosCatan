@@ -11,6 +11,7 @@ struct TournamentDetailView: View {
     @Bindable var tournament: Tournament
     
     @State var addGame = false
+    @State var editTournament = false
     
     var body: some View {
         ScrollView {
@@ -43,7 +44,16 @@ struct TournamentDetailView: View {
         .sheet(isPresented: $addGame) {
             NewGameView(tournament: tournament)
         }
+        .sheet(isPresented: $editTournament) {
+            EditTournamentView(tournament: tournament)
+                .presentationDetents([.height(200)])
+        }
         .navigationTitle(tournament.name)
+        .toolbar {
+            Button("Edit") {
+                editTournament = true
+            }
+        }
     }
 }
 

@@ -45,6 +45,15 @@ struct TournamentScoresView: View {
             }
             .chartSymbolScale(range: [.circle])
             .chartYScale(domain: 0...20)
+            .chartXAxis {
+                AxisMarks { value in
+                    AxisValueLabel {
+                        Text(value.as(String.self)!.split(separator: " ").first!)
+                    }
+                    AxisGridLine()
+                    AxisTick()
+                }
+            }
             .chartLegend(.hidden)
             .chartScrollableAxes(.horizontal)
             .chartXVisibleDomain(length: 3)

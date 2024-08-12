@@ -46,6 +46,7 @@ struct PlayerScoresView: View {
                     AxisValueLabel(orientation: .verticalReversed) {
                         Text(value.as(String.self)!)
                     }
+                    AxisGridLine(centered: true)
                 }
             }
             .chartLegend(.hidden)

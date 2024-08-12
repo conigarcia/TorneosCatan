@@ -22,7 +22,7 @@ struct PlayerFactsView: View {
         Grid {
             GridRow {
                 let games_won = selected_tournament == nil ? totalGamesWon() : gamesWonSelectedTournament()
-                PlayerFactCard(
+                FactCard(
                     fact: String(games_won),
                     primaryDescription: "partidas ganadas",
                     secondaryDescription: selected_tournament == nil ? nil : "de \(selected_tournament!.name)",
@@ -30,7 +30,7 @@ struct PlayerFactsView: View {
                 )
                 
                 let games_played = selected_tournament == nil ? player.scores.count : gamesPlayedSelectedTournament()
-                PlayerFactCard(
+                FactCard(
                     fact: String(games_played),
                     primaryDescription: "partidas jugadas",
                     secondaryDescription: selected_tournament == nil ? nil : "de \(selected_tournament!.name)",
@@ -40,15 +40,15 @@ struct PlayerFactsView: View {
             
             GridRow {
                 let last_won = selected_tournament == nil ? totalLastGameWon() : lastGameWonSelectedTournament()
-                PlayerFactCard(
-                    fact: last_won,
+                FactCard(
+                    fact: last_won ?? "-",
                     primaryDescription: "últ partida ganada",
                     secondaryDescription: selected_tournament == nil ? nil : "de \(selected_tournament!.name)",
                     color: selected_tournament == nil ? player.color.color : Color(.accent)
                 )
 
                 let average_points = selected_tournament == nil ? totalAveragePoints() : averagePointsSelectedTournament()
-                PlayerFactCard(
+                FactCard(
                     fact: String(average_points),
                     primaryDescription: "puntos promedio",
                     secondaryDescription: selected_tournament == nil ? nil : "de \(selected_tournament!.name)",
@@ -74,14 +74,22 @@ struct PlayerFactsView: View {
         }
     }
     
-    func totalLastGameWon() -> String {
+    func totalLastGameWon() -> String? {
         let last_score = player.scores.sorted(by: {$0.game!.date < $1.game!.date}).last(where: {$0.score == 18})
-        return dateFormatter.string(from: last_score!.game!.date)
+        if let ls = last_score {
+            return dateFormatter.string(from: ls.game!.date)
+        } else {
+            return nil
+        }
     }
 
-    func lastGameWonSelectedTournament() -> String {
+    func lastGameWonSelectedTournament() -> String? {
         let last_score = player.scores.sorted(by: {$0.game!.date < $1.game!.date}).last(where: {$0.game!.tournament == selected_tournament && $0.score == 18})
-        return dateFormatter.string(from: last_score!.game!.date)
+        if let ls = last_score {
+            return dateFormatter.string(from: ls.game!.date)
+        } else {
+            return nil
+        }
     }
 
     func totalAveragePoints() -> Int {
@@ -93,35 +101,5 @@ struct PlayerFactsView: View {
         let scores = player.scores.filter {$0.game!.tournament == selected_tournament}
         let scores_sum = scores.reduce(0, { res, score in res + score.score })
         return scores_sum/scores.count
-    }
-}
-
-struct PlayerFactCard: View {
-    let fact: String
-    let primaryDescription: String
-    let secondaryDescription: String?
-    let color: Color
-    
-    var body: some View {
-        GroupBox {
-            VStack {
-                Text(fact)
-                    .font(.title)
-                    .fontWeight(.bold)
-                    .foregroundStyle(Color(color))
-                    .contentTransition(.numericText())
-                Text(primaryDescription)
-                    .font(.subheadline.smallCaps())
-                    .foregroundStyle(Color(.secondaryLabel))
-                if secondaryDescription != nil {
-                    Text(secondaryDescription!)
-                        .font(.caption)
-                        .foregroundStyle(Color(.tertiaryLabel))
-                        .contentTransition(.numericText())
-                }
-            }
-            .frame(width: 140, height: 70)
-        }
-        .groupBoxStyle(.TCGroupBoxStyle)
     }
 }

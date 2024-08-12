@@ -17,35 +17,34 @@ struct GameDetailView: View {
         let minutes = Int((game.duration/3600).truncatingRemainder(dividingBy: 1) * 60)
         if hours == 0 && minutes == 0 {
             return "???"
-        } else {
-            let hoursString = hours == 1 ? "hora" : "horas"
-            let minutesString = minutes == 1 ? "minuto" : "minutos"
-            return "\(hours) \(hoursString) \(minutes == 0 ? "" : "\(minutes) \(minutesString)")"
         }
+        if hours < 0 || minutes < 0 {
+            return "???"
+        }
+        return "\(hours):\(minutes)"
     }
     
     var body: some View {
         ScrollView {
             VStack(alignment: .center) {
-                Title(title: "Duración:")
-                    .padding(.top)
-                    .padding(.horizontal)
-                
-                Text(durationString)
-                    .font(.title2)
-                    .fontWeight(.medium)
-                    .rowStyle()
-                
-                if let bank = game.bank {
-                    Title(title: "Banco:")
-                        .padding(.top)
-                        .padding(.horizontal)
-                    
-                    Text("\(bank.name)")
-                        .font(.title2)
-                        .fontWeight(.medium)
-                        .rowStyle()
+                HStack {
+                    FactCard(
+                        fact: durationString,
+                        primaryDescription: "duración",
+                        secondaryDescription: nil,
+                        color: Color(.accent)
+                    )
+
+                    if let bank = game.bank {
+                        FactCard(
+                            fact: bank.name,
+                            primaryDescription: "banco",
+                            secondaryDescription: nil,
+                            color: Color(.accent)
+                        )
+                    }
                 }
+                .padding(.top)
                 
                 Title(title: "Puntajes:")
                     .padding(.top)

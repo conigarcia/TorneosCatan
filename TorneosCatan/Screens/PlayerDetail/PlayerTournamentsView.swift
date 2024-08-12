@@ -23,7 +23,7 @@ struct PlayerTournamentsView: View {
                         .fontWeight(.medium)
                         .rowStyle()
                 }
-                ForEach(player.tournaments) { tournament in
+                ForEach(player.tournaments.sorted {$0.games.last?.date ?? Date() > $1.games.last?.date ?? Date()}) { tournament in
                     Button {
                         withAnimation {
                             if selected_tournament == tournament {

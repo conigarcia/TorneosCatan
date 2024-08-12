@@ -15,7 +15,7 @@ struct PlayerScoresView: View {
     
     var dateFormatter: DateFormatter {
         let df = DateFormatter()
-        df.dateFormat = "dd/MM hh:mm"
+        df.dateFormat = "dd/MM"
         return df
     }
 
@@ -41,11 +41,18 @@ struct PlayerScoresView: View {
             }
             .chartSymbolScale(range: [.circle, .circle])
             .chartYScale(domain: 0...20)
-            .chartXAxis(.hidden)
+            .chartXAxis {
+                AxisMarks { value in
+                    AxisValueLabel(orientation: .verticalReversed) {
+                        Text(value.as(String.self)!)
+                    }
+                }
+            }
             .chartLegend(.hidden)
             .chartScrollableAxes(.horizontal)
-            .chartXVisibleDomain(length: 20 * player.tournaments.count)
+            .chartXVisibleDomain(length: 20)
             .defaultScrollAnchor(.trailing)
+            .scrollIndicators(.visible)
             .frame(height: 250)
             .padding(.horizontal)
         }

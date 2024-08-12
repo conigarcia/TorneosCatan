@@ -56,6 +56,7 @@ struct PlayerScoresView: View {
             .scrollIndicators(.visible)
             .frame(height: 250)
             .padding(.horizontal)
+            .animation(.none, value: tournament)
         }
     }
 }

@@ -19,100 +19,43 @@ struct PlayerFactsView: View {
     }
     
     var body: some View {
-        Grid/*(horizontalSpacing: 20, verticalSpacing: 20)*/ {
+        Grid {
             GridRow {
-                GroupBox {
-                    let games_won = selected_tournament == nil ? totalGamesWon() : gamesWonSelectedTournament()
-                    VStack {
-                        Text(games_won, format: .number)
-                            .font(.title)
-                            .fontWeight(.bold)
-                            .foregroundStyle(selected_tournament == nil ? player.color.color : Color(.accent))
-                        Text("partidas ganadas")
-                            .font(.subheadline.smallCaps())
-                            .foregroundStyle(Color(.secondaryLabel))
-                        if selected_tournament != nil {
-                            Text("de \(selected_tournament!.name)")
-                                .font(.caption)
-                                .foregroundStyle(Color(.tertiaryLabel))
-                        }
-                    }
-                    .frame(width: 140)
-                    .animation(.none, value: selected_tournament)
-                }
-                .clipShape(.rect(cornerRadius: 10))
-                .animation(.snappy, value: selected_tournament)
+                let games_won = selected_tournament == nil ? totalGamesWon() : gamesWonSelectedTournament()
+                PlayerFactCard(
+                    fact: String(games_won),
+                    primaryDescription: "partidas ganadas",
+                    secondaryDescription: selected_tournament == nil ? nil : "de \(selected_tournament!.name)",
+                    color: selected_tournament == nil ? player.color.color : Color(.accent)
+                )
                 
-                GroupBox {
-                    VStack {
-                        let games_played = selected_tournament == nil ? player.scores.count : gamesPlayedSelectedTournament()
-                        Text(games_played, format: .number)
-                            .font(.title)
-                            .fontWeight(.bold)
-                            .foregroundStyle(selected_tournament == nil ? player.color.color : Color(.accent))
-                        Text("partidas jugadas")
-                            .font(.subheadline.smallCaps())
-                            .foregroundStyle(Color(.secondaryLabel))
-                        if selected_tournament != nil {
-                            Text("de \(selected_tournament!.name)")
-                                .font(.caption)
-                                .foregroundStyle(Color(.tertiaryLabel))
-                        }
-                    }
-                    .frame(width: 140)
-                    .animation(.none, value: selected_tournament)
-                }
-                .clipShape(.rect(cornerRadius: 10))
-                .animation(.snappy, value: selected_tournament)
+                let games_played = selected_tournament == nil ? player.scores.count : gamesPlayedSelectedTournament()
+                PlayerFactCard(
+                    fact: String(games_played),
+                    primaryDescription: "partidas jugadas",
+                    secondaryDescription: selected_tournament == nil ? nil : "de \(selected_tournament!.name)",
+                    color: selected_tournament == nil ? player.color.color : Color(.accent)
+                )
             }
             
             GridRow {
-                GroupBox {
-                    let last_won = selected_tournament == nil ? totalLastGameWon() : lastGameWonSelectedTournament()
-                    VStack {
-                        Text(last_won)
-                            .font(.title)
-                            .fontWeight(.bold)
-                            .foregroundStyle(selected_tournament == nil ? player.color.color : Color(.accent))
-                        Text("últ partida ganada")
-                            .font(.subheadline.smallCaps())
-                            .foregroundStyle(Color(.secondaryLabel))
-                        if selected_tournament != nil {
-                            Text(selected_tournament!.name)
-                                .font(.caption)
-                                .foregroundStyle(Color(.tertiaryLabel))
-                        }
-                    }
-                    .frame(width: 140)
-                    .animation(.none, value: selected_tournament)
-                }
-                .clipShape(.rect(cornerRadius: 10))
-                .animation(.snappy, value: selected_tournament)
+                let last_won = selected_tournament == nil ? totalLastGameWon() : lastGameWonSelectedTournament()
+                PlayerFactCard(
+                    fact: last_won,
+                    primaryDescription: "últ partida ganada",
+                    secondaryDescription: selected_tournament == nil ? nil : "de \(selected_tournament!.name)",
+                    color: selected_tournament == nil ? player.color.color : Color(.accent)
+                )
 
-                GroupBox {
-                    let average_points = selected_tournament == nil ? totalAveragePoints() : averagePointsSelectedTournament()
-                    VStack {
-                        Text(average_points, format: .number)
-                            .font(.title)
-                            .fontWeight(.bold)
-                            .foregroundStyle(selected_tournament == nil ? player.color.color : Color(.accent))
-                        Text("puntos promedio")
-                            .font(.subheadline.smallCaps())
-                            .foregroundStyle(Color(.secondaryLabel))
-                        if selected_tournament != nil {
-                            Text(selected_tournament!.name)
-                                .font(.caption)
-                                .foregroundStyle(Color(.tertiaryLabel))
-                        }
-                    }
-                    .frame(width: 140)
-                    .animation(.none, value: selected_tournament)
-                }
-                .clipShape(.rect(cornerRadius: 10))
-                .animation(.snappy, value: selected_tournament)
+                let average_points = selected_tournament == nil ? totalAveragePoints() : averagePointsSelectedTournament()
+                PlayerFactCard(
+                    fact: String(average_points),
+                    primaryDescription: "puntos promedio",
+                    secondaryDescription: selected_tournament == nil ? nil : "de \(selected_tournament!.name)",
+                    color: selected_tournament == nil ? player.color.color : Color(.accent)
+                )
             }
         }
-        .animation(.snappy, value: selected_tournament)
     }
     
     func totalGamesWon() -> Int {
@@ -150,5 +93,35 @@ struct PlayerFactsView: View {
         let scores = player.scores.filter {$0.game!.tournament == selected_tournament}
         let scores_sum = scores.reduce(0, { res, score in res + score.score })
         return scores_sum/scores.count
+    }
+}
+
+struct PlayerFactCard: View {
+    let fact: String
+    let primaryDescription: String
+    let secondaryDescription: String?
+    let color: Color
+    
+    var body: some View {
+        GroupBox {
+            VStack {
+                Text(fact)
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .foregroundStyle(Color(color))
+                    .contentTransition(.numericText())
+                Text(primaryDescription)
+                    .font(.subheadline.smallCaps())
+                    .foregroundStyle(Color(.secondaryLabel))
+                if secondaryDescription != nil {
+                    Text(secondaryDescription!)
+                        .font(.caption)
+                        .foregroundStyle(Color(.tertiaryLabel))
+                        .contentTransition(.numericText())
+                }
+            }
+            .frame(width: 140, height: 70)
+        }
+        .groupBoxStyle(.TCGroupBoxStyle)
     }
 }

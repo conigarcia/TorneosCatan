@@ -30,7 +30,7 @@ struct PlayerDetailView: View {
             Spacer()
         }
         .navigationTitle(player.name)
-        .animation(.snappy, value: tournament)
+//        .animation(.snappy, value: tournament)
     }
 }
 

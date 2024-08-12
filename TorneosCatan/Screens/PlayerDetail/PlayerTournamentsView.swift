@@ -24,24 +24,27 @@ struct PlayerTournamentsView: View {
                         .rowStyle()
                 }
                 ForEach(player.tournaments) { tournament in
-                    HStack {
-                        TournamentRowView(tournament: tournament)
-                            .foregroundStyle(selected_tournament == tournament ? Color(.accent) : player.color.color)
-                        
-                        Spacer()
-                        
-                        Text("\(tournament.scores[player]!) puntos (#\(tournament.ranking.firstIndex(of: player)! + 1))")
-                            .font(.subheadline)
-                            .fontWeight(.medium)
-                            .foregroundStyle(Color(.secondaryLabel))
-                    }
-                    .rowStyle()
-                    .onTapGesture {
-                        if selected_tournament == tournament {
-                            selected_tournament = nil
-                        } else {
-                            selected_tournament = tournament
+                    Button {
+                        withAnimation {
+                            if selected_tournament == tournament {
+                                selected_tournament = nil
+                            } else {
+                                selected_tournament = tournament
+                            }
                         }
+                    } label: {
+                        HStack {
+                            TournamentRowView(tournament: tournament)
+                                .foregroundStyle(selected_tournament == tournament ? Color(.accent) : player.color.color)
+                            
+                            Spacer()
+                            
+                            Text("\(tournament.scores[player]!) puntos (#\(tournament.ranking.firstIndex(of: player)! + 1))")
+                                .font(.subheadline)
+                                .fontWeight(.medium)
+                                .foregroundStyle(Color(.secondaryLabel))
+                        }
+                        .rowStyle()
                     }
                 }
             }

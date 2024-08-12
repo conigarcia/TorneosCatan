@@ -30,14 +30,14 @@ struct PlayerScoresView: View {
                     y: .value("Puntaje", score.score)
                 )
                 .symbol(by: .value("Torneo", score.game!.tournament!.name))
-                .foregroundStyle(score.game!.tournament! == tournament ? player.color.color : Color(.accent))
+                .foregroundStyle(score.game!.tournament! == tournament ? Color(.accent) : player.color.color)
                 LineMark(
                     x: .value("Partida", dateFormatter.string(from: score.game!.date)),
                     y: .value("Puntaje", score.score)
                 )
                 .lineStyle(.init(lineWidth: score.game!.tournament! == tournament ? 2 : 0))
                 .symbol(by: .value("Torneo", score.game!.tournament!.name))
-                .foregroundStyle(score.game!.tournament! == tournament ? player.color.color : Color(.accent))
+                .foregroundStyle(score.game!.tournament! == tournament ? Color(.accent) : player.color.color)
             }
             .chartSymbolScale(range: [.circle, .circle])
             .chartYScale(domain: 0...20)

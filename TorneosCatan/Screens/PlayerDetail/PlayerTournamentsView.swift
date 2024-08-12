@@ -26,7 +26,7 @@ struct PlayerTournamentsView: View {
                 ForEach(player.tournaments) { tournament in
                     HStack {
                         TournamentRowView(tournament: tournament)
-                            .foregroundStyle(selected_tournament == tournament ? player.color.color : Color(.accent))
+                            .foregroundStyle(selected_tournament == tournament ? Color(.accent) : player.color.color)
                         
                         Spacer()
                         

@@ -37,6 +37,7 @@
 		CF4077522C0235F700869154 /* TournamentScoresView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4077512C0235F700869154 /* TournamentScoresView.swift */; };
 		CF4077552C0412B700869154 /* RankingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4077542C0412B700869154 /* RankingView.swift */; };
 		CF46D1642C69982700CC0B35 /* EditTournamentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF46D1632C69982700CC0B35 /* EditTournamentView.swift */; };
+		CF46D1662C69AA8700CC0B35 /* PlayerFactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF46D1652C69AA8700CC0B35 /* PlayerFactsView.swift */; };
 		CFB5A07E2BFE8CB800E7AA70 /* TCButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB5A07D2BFE8CB800E7AA70 /* TCButtonStyle.swift */; };
 		CFB5A0802BFF80C800E7AA70 /* TCRowModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB5A07F2BFF80C800E7AA70 /* TCRowModifier.swift */; };
 		CFB5A0822BFF845E00E7AA70 /* TournamentPlayersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB5A0812BFF845E00E7AA70 /* TournamentPlayersView.swift */; };
@@ -106,6 +107,7 @@
 		CF4077512C0235F700869154 /* TournamentScoresView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentScoresView.swift; sourceTree = "<group>"; };
 		CF4077542C0412B700869154 /* RankingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingView.swift; sourceTree = "<group>"; };
 		CF46D1632C69982700CC0B35 /* EditTournamentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTournamentView.swift; sourceTree = "<group>"; };
+		CF46D1652C69AA8700CC0B35 /* PlayerFactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerFactsView.swift; sourceTree = "<group>"; };
 		CFB5A07D2BFE8CB800E7AA70 /* TCButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCButtonStyle.swift; sourceTree = "<group>"; };
 		CFB5A07F2BFF80C800E7AA70 /* TCRowModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCRowModifier.swift; sourceTree = "<group>"; };
 		CFB5A0812BFF845E00E7AA70 /* TournamentPlayersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentPlayersView.swift; sourceTree = "<group>"; };
@@ -287,6 +289,7 @@
 			isa = PBXGroup;
 			children = (
 				CF1F8A0D2BFC2F9C00305CE3 /* PlayerDetailView.swift */,
+				CF46D1652C69AA8700CC0B35 /* PlayerFactsView.swift */,
 				CFB5A0952C00E94D00E7AA70 /* PlayerTournamentsView.swift */,
 				CFB5A0992C018EE300E7AA70 /* PlayerScoresView.swift */,
 			);
@@ -513,6 +516,7 @@
 				CFB5A0802BFF80C800E7AA70 /* TCRowModifier.swift in Sources */,
 				CF3500612BF9210000D64D28 /* PlayerRowView.swift in Sources */,
 				CF4077552C0412B700869154 /* RankingView.swift in Sources */,
+				CF46D1662C69AA8700CC0B35 /* PlayerFactsView.swift in Sources */,
 				CFB5A0922BFFC94800E7AA70 /* GameSamples.swift in Sources */,
 				CF4077522C0235F700869154 /* TournamentScoresView.swift in Sources */,
 				CF1F8A122BFC355800305CE3 /* TournamentSamples.swift in Sources */,

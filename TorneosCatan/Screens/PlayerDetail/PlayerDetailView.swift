@@ -14,6 +14,11 @@ struct PlayerDetailView: View {
 
     var body: some View {
         ScrollView {
+            if !player.scores.isEmpty {
+                PlayerFactsView(player: player, selected_tournament: $tournament)
+                    .padding(.top)
+            }
+            
             PlayerTournamentsView(player: player, selected_tournament: $tournament)
                 .padding(.top)
 
@@ -25,18 +30,14 @@ struct PlayerDetailView: View {
             Spacer()
         }
         .navigationTitle(player.name)
-        .onAppear {
-            if tournament == nil {
-                tournament = player.tournaments.first
-            }
-        }
+        .animation(.snappy, value: tournament)
     }
 }
 
-#Preview {
-    let preview = Preview(Player.self)
-    return NavigationStack {
-        PlayerDetailView(player: Player.samplePlayes[0])
-            .modelContainer(preview.container)
-    }
-}
+//#Preview {
+//    let preview = Preview(Player.self)
+//    return NavigationStack {
+//        PlayerDetailView(player: Player.samplePlayes[0])
+//            .modelContainer(preview.container)
+//    }
+//}

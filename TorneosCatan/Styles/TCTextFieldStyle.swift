@@ -18,7 +18,7 @@ struct TCTextFieldStyle: TextFieldStyle {
 }
 
 #Preview {
-    @State var input = ""
+    @Previewable @State var input = ""
     
     return TextField(text: $input, prompt: Text("Escriba algo")) {}
         .textFieldStyle(TCTextFieldStyle())

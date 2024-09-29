@@ -11,7 +11,7 @@ import SwiftData
 @Model
 final class Player {
     var name: String
-    let color: PlayerColor
+    var color: PlayerColor
     
     @Relationship(inverse: \Tournament.players)
     var tournaments: [Tournament] = []

@@ -88,7 +88,7 @@
 		CF1F8A1E2BFC3C7A00305CE3 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		CF1F8A202BFD7A4D00305CE3 /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
 		CF1F8A222BFD830800305CE3 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
-		CF35001D2BF90A0C00D64D28 /* TorneosCatan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TorneosCatan.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF35001D2BF90A0C00D64D28 /* Torneos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Torneos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF3500202BF90A0C00D64D28 /* TorneosCatanApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TorneosCatanApp.swift; sourceTree = "<group>"; };
 		CF3500222BF90A0C00D64D28 /* PlayerListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerListView.swift; sourceTree = "<group>"; };
 		CF3500242BF90A0D00D64D28 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -200,7 +200,7 @@
 		CF35001E2BF90A0C00D64D28 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CF35001D2BF90A0C00D64D28 /* TorneosCatan.app */,
+				CF35001D2BF90A0C00D64D28 /* Torneos.app */,
 				CF35002D2BF90A0D00D64D28 /* TorneosCatanTests.xctest */,
 				CF3500372BF90A0D00D64D28 /* TorneosCatanUITests.xctest */,
 			);
@@ -390,7 +390,7 @@
 			);
 			name = TorneosCatan;
 			productName = TorneosCatan;
-			productReference = CF35001D2BF90A0C00D64D28 /* TorneosCatan.app */;
+			productReference = CF35001D2BF90A0C00D64D28 /* Torneos.app */;
 			productType = "com.apple.product-type.application";
 		};
 		CF35002C2BF90A0D00D64D28 /* TorneosCatanTests */ = {
@@ -437,7 +437,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1530;
-				LastUpgradeCheck = 1530;
+				LastUpgradeCheck = 1620;
 				TargetAttributes = {
 					CF35001C2BF90A0C00D64D28 = {
 						CreatedOnToolsVersion = 15.3;
@@ -724,7 +724,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.conigarcia.TorneosCatan;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Torneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -753,7 +753,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.conigarcia.TorneosCatan;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Torneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -763,7 +763,6 @@
 		CF3500452BF90A0D00D64D28 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -783,7 +782,6 @@
 		CF3500462BF90A0D00D64D28 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -803,7 +801,6 @@
 		CF3500482BF90A0D00D64D28 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = N3ST245ZGW;
@@ -821,7 +818,6 @@
 		CF3500492BF90A0D00D64D28 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = N3ST245ZGW;
